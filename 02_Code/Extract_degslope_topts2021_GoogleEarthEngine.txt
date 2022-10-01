@@ -1,0 +1,23 @@
+var dem = ee.Image("USGS/SRTMGL1_003"),
+    pts = ee.FeatureCollection("users/racheopod/plots_2021");
+
+//Add wetland points to map
+Map.addLayer(pts, {palette: "black"}, "Wetland Points");
+
+//Calculate slope
+var slope = ee.Terrain.slope(dem);
+print(slope)
+
+//Make pts a feature collection
+var pts = ee.FeatureCollection(pts);
+print(pts);
+
+//Extract degrees of slope to points
+var pts1 = slope.reduceRegions(pts, ee.Reducer.first(), 30, 'EPSG:4326'); 
+print(pts1);
+
+// Export
+Export.table.toDrive({
+  collection: pts1,
+  folder: "Sagebrush Sampling Areas",
+  description: "2021pts_degslope"});
