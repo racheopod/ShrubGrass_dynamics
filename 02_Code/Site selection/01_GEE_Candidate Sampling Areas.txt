@@ -1,0 +1,198 @@
+//Load relevant variables
+var sagebrush = ee.Image("users/racheopod/Sagebrush/SagebrushBiome"),
+    springs = ee.FeatureCollection("users/racheopod/Sagebrush/NHDSprings"),
+    wells = ee.FeatureCollection("users/racheopod/Sagebrush/NHDWells"),
+    waterbodies = ee.FeatureCollection("users/racheopod/Sagebrush/NHDWaterbodies"),
+    rails = ee.FeatureCollection("users/racheopod/Sagebrush/NTDRails"),
+    fires = ee.FeatureCollection("users/racheopod/Sagebrush/Fires1999to2020"),
+    treatments = ee.FeatureCollection("users/racheopod/Sagebrush/LTDLLandTreatments"),
+    fires_old = ee.FeatureCollection("users/racheopod/Sagebrush/Fires1921to1989"),
+    perstreams = ee.FeatureCollection("users/racheopod/Sagebrush/NHDPerStreams"),
+    DEM = ee.Image("USGS/NED"),
+    czones = ee.Image("users/racheopod/Sagebrush/Czones8"),
+    odt = ee.FeatureCollection("users/racheopod/Sagebrush/ODT"),
+    exportregion = 
+    /* color: #d63000 */
+    /* shown: false */
+    ee.Geometry.Polygon(
+        [[[-122.0010407671218, 46.68869160507314],
+          [-123.1875642046218, 42.20579226733712],
+          [-122.7481110796218, 40.52387987960297],
+          [-121.3858063921218, 38.86714574919269],
+          [-120.2432282671218, 36.85507213934672],
+          [-120.7705720171218, 35.685918904939825],
+          [-120.1113923296218, 34.49937717089196],
+          [-118.3096345171218, 33.73536816598276],
+          [-116.9912751421218, 32.66903937173387],
+          [-115.4971345171218, 32.557990659390335],
+          [-112.5088532671218, 33.58906201823125],
+          [-110.3994782671218, 33.18544022494832],
+          [-108.6416657671218, 31.064293678056707],
+          [-104.0713532671218, 31.73944542994896],
+          [-104.1592438921218, 32.70602499012673],
+          [-104.2031892046218, 35.721604484432085],
+          [-103.6758454546218, 37.93732688688118],
+          [-104.3789704546218, 40.59065534015329],
+          [-100.4238923296218, 43.39871783750556],
+          [-99.8526032671218, 44.69370490121336],
+          [-100.4678376421218, 47.40732460314711],
+          [-102.6211579546218, 48.96007404058517],
+          [-120.9902985796218, 49.075355822779194]]]),
+    canals = ee.FeatureCollection("users/racheopod/Sagebrush/NHDCanals"),
+    intstreams1 = ee.FeatureCollection("users/racheopod/Sagebrush/NHDIntStreamsE"),
+    intstreams2 = ee.FeatureCollection("users/racheopod/Sagebrush/NHDIntStreamsW"),
+    roadsNE = ee.FeatureCollection("users/racheopod/Sagebrush/NTDRoadsNE"),
+    roadsNW = ee.FeatureCollection("users/racheopod/Sagebrush/NTDRoadsNW"),
+    roadsSE = ee.FeatureCollection("users/racheopod/Sagebrush/NTDRoadsSE"),
+    roadsSW1 = ee.FeatureCollection("users/racheopod/Sagebrush/NTDRoadsSW1"),
+    roadsSW2 = ee.FeatureCollection("users/racheopod/Sagebrush/NTDRoadsSW2"),
+    table = ee.FeatureCollection("users/racheopod/Sagebrush/LF_140EVT_09152016_reclassification"),
+    evt = ee.ImageCollection("LANDFIRE/Vegetation/EVT/v1_4_0"),
+    StudyArea = ee.FeatureCollection("users/racheopod/Sagebrush/StudyArea");
+
+//Create a sagebrush habitat map
+var sageonly = sagebrush.gt(0);
+Map.addLayer(sageonly, {min:0,max:1, palette:"red,purple"}, "Big sagebrush habitat");
+
+//Add big sagebrush biome to map
+//Map.addLayer(sagebrush, {min:0, max:1089, palette: "#f0f0f0,#000000"}, "Big sagebrush habitat density");
+
+//Create mask of big sagebrush biome:
+var sageMask = sagebrush.gt(0);
+
+//Calculate slope:
+var thisSlope = ee.Terrain.slope(DEM);
+var lowSlope = thisSlope.gt(6);
+var slopeMask = lowSlope.mask(lowSlope);
+//Add slopemask to map
+//Map.addLayer(slopeMask, {min:0, max:1, palette: 'white,green'}, "Slope Mask");
+
+//Add fires to map
+//Map.addLayer(fires_old, {color:"yellow"}, "Fires 1921-1989");
+//Map.addLayer(fires, {color: "red"}, "Fires 1990-2020");
+
+//Add Land Treatments to map
+//Map.addLayer(treatments, {color: "orange"}, "Land Treatments");
+
+//Add National Hydrology Dataset features to map
+//Map.addLayer(springs, {color: "#addd8e"}, "Springs");
+//Map.addLayer(wells, {color: "#41b6c4"}, "Wells");
+//Map.addLayer(waterbodies, {color: "#c6dbef"}, "Waterbodies (ponds, lakes, reservoirs");
+//Map.addLayer(perstreams, {color: "#0000ff"}, "Perennial Streams");
+//Map.addLayer(intstreams1, {color: "#00ff00"}, "Intermittent Streams");
+//Map.addLayer(intstreams2, {color: "#00ff00"}, "Intermittent Streams");
+//Map.addLayer(canals, {color: "#ff9900"}, "Canals");
+
+//Add National Transportation Dataset features to map
+//Map.addLayer(rails, {color: "#d94801"}, "Rails");
+//Map.addLayer(roadsNE, {color: "#ffffff"}, "Roads");
+//Map.addLayer(roadsNW, {color: "#ffffff"}, "Roads");
+//Map.addLayer(roadsSE, {color: "#ffffff"}, "Roads");
+//Map.addLayer(roadsSW1, {color: "#ffffff"}, "Roads");
+//Map.addLayer(roadsSW1, {color: "#ffffff"}, "Roads");
+
+
+//Create buffer function for springs, wells, and waterbodies
+var buffer2km = function(thisFeature){
+  return thisFeature.buffer(2000);
+};
+
+//Create buffer function for perennial streams + canals (1 km):
+var buffer1km = function(thisFeature){
+  return thisFeature.buffer(1000);
+};
+
+//Create buffer function for roads, rails, and intermittent streams
+var buffer50m = function(thisFeature){
+  return thisFeature.buffer(50);
+};
+
+//Buffer features:
+var buffsprings = springs.map(buffer2km);
+var buffwells = wells.map(buffer2km);
+var buffwaterbodies = waterbodies.map(buffer2km);
+
+var buffperstreams = perstreams.map(buffer1km);
+var buffcanals = canals.map(buffer1km);
+
+var buffintstreams1 = intstreams1.map(buffer50m);
+var buffintstreams2 = intstreams2.map(buffer50m);
+
+var buffrails = rails.map(buffer50m);
+var buffroadsNE = roadsNE.map(buffer50m);
+var buffroadsNW = roadsNW.map(buffer50m);
+var buffroadsSE = roadsSE.map(buffer50m);
+var buffroadsSW1 = roadsSW1.map(buffer50m);
+var buffroadsSW2 = roadsSW2.map(buffer50m);
+
+// Create masks from all the featureCollections
+var springsmask = ee.Image.constant(1).clipToCollection(buffsprings).mask().not();
+var wellsmask = ee.Image.constant(1).clipToCollection(buffwells).mask().not();
+var waterbodiesmask = ee.Image.constant(1).clipToCollection(buffwaterbodies).mask().not();
+var perstreamsmask = ee.Image.constant(1).clipToCollection(buffperstreams).mask().not();
+var roadsNEmask = ee.Image.constant(1).clipToCollection(buffroadsNE).mask().not();
+var roadsNWmask = ee.Image.constant(1).clipToCollection(buffroadsNW).mask().not();
+var roadsSEmask = ee.Image.constant(1).clipToCollection(buffroadsSE).mask().not();
+var roadsSW1mask = ee.Image.constant(1).clipToCollection(buffroadsSW1).mask().not();
+var roadsSW2mask = ee.Image.constant(1).clipToCollection(buffroadsSW2).mask().not();
+var railsmask = ee.Image.constant(1).clipToCollection(buffrails).mask().not();
+var firesmask = ee.Image.constant(1).clipToCollection(fires).mask().not();
+var fires_oldmask = ee.Image.constant(1).clipToCollection(fires_old).mask().not();
+var treatmentsmask = ee.Image.constant(1).clipToCollection(treatments).mask().not();
+var canalsmask = ee.Image.constant(1).clipToCollection(buffcanals).mask().not();
+var intstreams1mask = ee.Image.constant(1).clipToCollection(buffintstreams1).mask().not();
+var intstreams2mask = ee.Image.constant(1).clipToCollection(buffintstreams2).mask().not();
+
+//Bring in Landfire EVT data to remove agriculture and human development classes:
+//Filter EVT to just our area of interest (limits to the CONUS image from collection)
+var evtSage = ee.Image(evt.filterBounds(StudyArea).first());
+//Map.addLayer(evtSage, {min:3001, max:4000, palette: 'red,orange,yellow,green,blue,purple'}, "EVT CONUS")
+
+//Remap each veg type:
+var remapImage = function(feature) {
+ var thisImage = evtSage.remap([feature.get('VALUE')],[feature.get('Reclassify')]).rename('HUMANDEV');
+ return thisImage.unmask(2);
+};
+
+//Map over each veg type to create ImageCollection of each reclassification:
+var evtSage1 = ee.ImageCollection(table.map(remapImage));
+
+//Add all together taking the minimum value at each turn (looking for 1's)
+//Note: 2's are only masked areas outside of CONUS
+var evtHumanDev = evtSage1.reduce(ee.Reducer.min()).eq(1);
+//Convert to a mask
+var HumDevMask = evtHumanDev.eq(0);
+
+//Create function to iterate thru masks to create final sampling area
+var combineMasks = function(thisMask, firstimg){
+  var image = ee.Image(firstimg);
+  return image.updateMask(thisMask);
+};
+
+//Create list of masks:
+var MaskList = ee.ImageCollection(ee.List([springsmask,wellsmask,waterbodiesmask,railsmask,
+                                           perstreamsmask,HumDevMask,firesmask,
+                                           fires_oldmask,treatmentsmask,canalsmask,
+                                           intstreams1mask,intstreams2mask,roadsNEmask,
+                                           roadsNWmask,roadsSEmask,roadsSW1mask,roadsSW2mask]));
+
+//Iterate over list to update sageonly and exclude masked areas
+var SampleAreas = ee.Image(MaskList.iterate(combineMasks, sageonly));
+Map.addLayer(SampleAreas, {min:0, max:1, palette: "#f0f0f0,#000000"}, "Potential Sampling Areas");
+
+//Add climate zones
+Map.addLayer(czones, {min: 1, max: 9, palette: '#b35900,#ffff00,#8600b3,#000000,#ff0000,#ff9900,#00b33c,#0099ff,#ff6699'}, "Climate Zones");
+
+//Add ODT
+Map.addLayer(odt, {color: 'orange'}, "Oregon Desert Trail");
+
+// Get crs from sagebrush image
+var thiscrs = sagebrush.projection().crs();
+
+Export.image.toDrive({
+  image:SampleAreas, 
+  description: "CandidateSamplingAreas_2km",
+  scale: 30, 
+  crs: thiscrs,
+  region:exportregion,
+  maxPixels:1e13});
