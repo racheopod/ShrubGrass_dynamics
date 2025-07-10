@@ -1,24 +1,23 @@
 ################################################################################
-# Purpose: Summarize data from shrub-grass interaction plots
+# Purpose: Summarize data from 51 shrub-grass interaction sites in sagebrush 
+#          habitat across the western U.S.
 #
 #
 # Rachel R. Renne
 # March 26, 2025
+# Updated: July 10, 2025
 ################################################################################
 
 # Load libraries
 library(dplyr)
-library("rSFSW2")
-library("rSOILWAT2")
 
 # Set up directories
-datadir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/03_Data_Entry/Final_data'
+datadir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/01_Data/Data for submission'
 codedir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/02_Code'
-outdir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/01_Data'
-figdir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/03_Figures/Final_figures'
+figdir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/03_Figures/Figures for submission'
 
 ################################################################################
-# Step 1: Summarize vegetation and climate variables
+# Step 1: Summarize vegetation, soil water, and climate variables
 
 # Read in code files with functions to calculate RIIs
 source(file.path(codedir, "lpi.R"))
@@ -39,39 +38,26 @@ summary(plots$mat)
 lpi <- read.csv(file.path(datadir, "lpi.csv"))
 
 # Create the ftype data frame
-codes <- read.csv(file.path(datadir,"codes.csv"))
+codes <- read.csv(file.path(datadir,"codes_withpathway.csv"))
 codes1 <- codes[,c("code","GrowthForm")]
 names(codes1) <- c("species","ftype")
 # Remove "S" (soil), "R" (rock), "N" (none), and "L" (litter)  rows
-codes2 <- codes1[!(codes1$ftype %in% c("S","R","N","L")),]
+codes2 <- codes1[!(codes1$ftype %in% c("S","R","N","L","LC","VL","M")),]
 ftype = codes2
 
 # Calculate cover of each species
-cover <- lpicover_ftypecorrected(lpi, n_layers = 5,
+cover <- lpicover_ftypecorrected(lpi, ftype = ftype, n_layers = 5,
                   soilsurface = c("BR","BY","CB","EL","GR","LC","M","S","ST"))
 
 # Make dataframe wider
 cover1 <- tidyr::pivot_wider(cover, id_cols = plot, names_from = species, 
                              values_from = cover, values_fill = 0)
 
-# Look at some relationships
+# Look at shrub vs pgrass cover
 par(mar = c(2,2,1,1), mgp = c(1,0.1,0), tcl = 0.1)
 plot(cover1$PG ~ cover1$SH, pch = 16, col = rgb(0.5,0.5,0.5,0.7), cex = 2,
      xlab = "Shrub cover", ylab = "Perennial grass cover",
      xlim = c(0,0.72), ylim = c(0,0.72))
-
-hist(cover1$PG, breaks = 15, main = "",
-     xlab = "Perennial grass cover (%)",
-     xlim = c(0,0.72))
-abline(h=0)
-box()
-
-hist(cover1$SH, breaks = 15, main = "",
-     xlab = "Shrub cover (%)",
-     xlim = c(0,0.72))
-abline(h=0)
-box()
-
 
 # Calculate shrub/grass dominance index:
 cover1$dominance <- (cover1$SH - cover1$PG)/(cover1$SH + cover1$PG)
@@ -93,69 +79,20 @@ summary(cover1$PG)
 #   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 # 0.0000  0.0600  0.1267  0.1889  0.3067  0.5467 
 
-################################################################################
-# Step 2: Summarize soil water variables
-
-# Set up project directory
-dir_prj <- "C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/04_Simulation_Experiment/Interspace_simulations/Interspace_simulations_20250114"
-
-# Database directory
-dir_dat <- file.path(dir_prj, "4_Simulation")
-
-# Database name
-outDB_fname <- file.path(dir_dat, "dbOutput.sqlite3")
-
-# Connect to output database
-outDB_con <- RSQLite::dbConnect(RSQLite::SQLite(), outDB_fname)
-
-# Average daily transpiration
-trans <- get.Table_Scenario(outDB_fname,
-                            responseName = "aggregation_doy_Transpiration", MeanOrSD = "Mean",
-                            scenario = "Current", header = TRUE)
-
-# Clean up
-RSQLite::dbDisconnect(outDB_con)  
-
-# Create a plotlist:
-plotlist1 <- read.csv(file.path(dir_prj, "1_Input/SWRuns_InputMain_interspace_simulations_v12.csv"))
-plotlist <- plotlist1$Label
-
-# Make results df
-results <- data.frame(plot = plotlist,avg_trans_0_30cm = NA,avg_trans_30_200cm = NA)
-
-# Loop through and get relevant results
-for (i in 1:nrow(results)){
-  # Get for this plot
-  thisplot <- trans[trans$Label == plotlist[i],52:417]
-  
-  # Get shallow, mid, deep
-  results$avg_trans_0_30cm[i] <- sum(thisplot[1:4,])
-  results$avg_trans_30_200cm[i] <- sum(thisplot[5:15,])
-}
-
-# Calculate total transpiration
-results$avg_trans_0_200cm <- results$avg_trans_0_30cm+results$avg_trans_30_200cm
-
-# Calculate ratio of shallow to total transpiration
-results$prop_shallow <- results$avg_trans_0_30cm/results$avg_trans_0_200cm
-
 # Summarize water balance
-summary(results$avg_trans_0_200cm)
+summary(plots$avg_trans_0_200cm)
 #    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 # 39.08  100.25  133.92  145.75  186.19  292.80 
 
-summary(results$prop_shallow)
+summary(plots$prop_shallow)
 #    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 # 0.3254  0.4355  0.4789  0.4847  0.5309  0.6909 
 
 ################################################################################
-# Step 3: Summarize dung
+# Step 2: Summarize dung
 
 # Read in dung
 dung <- read.csv(file.path(datadir, "dung.csv"))
-
-# Remove missing value
-dung <- dung[!is.na(dung$count),]
 
 # Summarize by species per plot
 dung1 <- dung %>% group_by(plot, animal) %>% summarise(total = sum(count))
