@@ -41,13 +41,11 @@ lpi <- read.csv(file.path(datadir, "lpi.csv"))
 codes <- read.csv(file.path(datadir,"codes_withpathway.csv"))
 codes1 <- codes[,c("code","GrowthForm")]
 names(codes1) <- c("species","ftype")
-# Remove "S" (soil), "R" (rock), "N" (none), and "L" (litter)  rows
-codes2 <- codes1[!(codes1$ftype %in% c("S","R","N","L","LC","VL","M")),]
-ftype = codes2
+ftype = codes1
 
 # Calculate cover of each species
 cover <- lpicover_ftypecorrected(lpi, ftype = ftype, n_layers = 5,
-                  soilsurface = c("BR","BY","CB","EL","GR","LC","M","S","ST"))
+                  soilsurface = c("BR","BY","CB","EL","GR","LC","M","S","ST","R"))
 
 # Make dataframe wider
 cover1 <- tidyr::pivot_wider(cover, id_cols = plot, names_from = species, 
