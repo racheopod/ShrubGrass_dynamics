@@ -153,7 +153,7 @@ dev.off()
 art <- rast(file.path(datadir, 'CoreARTR_combined_DayMet_cropped&trimmed.tif'))
 
 # Make file
-png(file.path(figdir,"Sites_in_SageRegion_dominance.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Fig3a.png"), width = 4, height = 4, units = "in", res = 300)
 par(mar = c(1,1,1,1), tcl = -0.2)
 maps::map("state", regions = c("Wyoming","Nevada","Idaho","Colorado","Arizona",
                                "Utah","Washington","Oregon","Montana","California",
@@ -168,7 +168,7 @@ GISTools::north.arrow(x = -102, y = 46.5, lab = "N", len = 0.6, col = "black")
 dev.off()
 
 # Create legend for color scheme of dominance for map
-png(file.path(figdir,"Sites_in_SageRegion_dominance_and_MAP_legend.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Fig3a_legend.png"), width = 4, height = 4, units = "in", res = 300)
 par(mar = c(1,1,1,1), las = 0, mgp = c(1,0.1,0))
 plot(c(1:10)~1, pch = 16, col = "white", yaxt = "n", xaxt = "n", bty = "n",
      xlab = "", ylab ="")
@@ -180,7 +180,7 @@ axis(side = 2, at = c(2,9), labels = c("Grass","Shrub"), pos = 5, tick = F,
 dev.off()
 
 # Show points in climate space
-png(file.path(figdir,"ClimateSpace&dominance.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Fig3b.png"), width = 4, height = 4, units = "in", res = 300)
 par(mar = c(2,2,1,1), tcl = 0.1, mgp = c(1,0.1,0))
 plot(plots$map~plots$mat, pch = 16, cex=2,
        col = cols[cover1$dom_bin],
@@ -324,7 +324,7 @@ plot(cover1$dominance~plots$prop_shallow, pch = 16,
      ylab =  "Grass (-) to shrub (+) dominance", 
      xlab = "")
 #points(cover1$dominance~plots$prop_shallow, cex = 2, lwd = 2)
-mtext("Proportion of total transpiration from\nshallow soils (0-30 cm)", 1, line = 2)
+mtext("Proportion of total transpiration from\nshallow soil layers (0-30 cm)", 1, line = 2)
 abline(h=0, lty = 2)
 curve(m$coefficients[1] + m$coefficients[2]*x, 0.3, 0.7, add = TRUE,
       lwd = 3, col = "#01665e") # wet plots

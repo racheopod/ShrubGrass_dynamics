@@ -281,7 +281,7 @@ plot(pgrass$pcomm_cover_rii~pgrass$prop_shallow, pch = 16,
      ylab =  "RII: Competitive (-) to Facilitative (+)", 
      xlab = "")
 #points(cover1$dominance~plots$prop_shallow, cex = 2, lwd = 2)
-mtext("Proportion of total transpiration from\nshallow soils (0-30 cm)", 1, line = 2)
+mtext("Proportion of total transpiration from\nshallow soils layers (0-30 cm)", 1, line = 2)
 abline(h=0, lty = 2)
 curve(m$coefficients[1] + m$coefficients[2]*x, 0.3, 0.7, add = TRUE,
       lwd = 3, col = "#01665e") # wet plots
