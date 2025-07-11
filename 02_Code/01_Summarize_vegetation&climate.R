@@ -10,6 +10,7 @@
 
 # Load libraries
 library(dplyr)
+library(daymetr)
 
 # Set up directories
 datadir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/01_Data/Data for submission'
@@ -17,13 +18,74 @@ codedir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relati
 figdir <- 'C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/03_Figures/Figures for submission'
 
 ################################################################################
-# Step 1: Summarize vegetation, soil water, and climate variables
+# Step 1: Get climate data for Sala et al. 1997 model
+
+# Read in plots
+plots <- read.csv(file.path(datadir, "plots.csv"))
+
+# Remove climate variables if present to make data acquisition process clear
+plots <- plots[,c(1:21)]
+
+# Make day/month list
+month <- c(rep(1,31),rep(2,28),rep(3,31),rep(4,30),rep(5,31),rep(6,30),rep(7,31),
+           rep(8,31),rep(9,30),rep(10,31),rep(11,30),rep(12,31))
+
+# Make dataframes:
+ppt = data.frame(plot = plots$plot, Jan = NA, Feb = NA, Mar = NA, Apr = NA, 
+                 May = NA, Jun = NA,Jul = NA, Aug = NA, Sep = NA, Oct = NA, 
+                 Nov = NA, Dec = NA)
+tmax = ppt
+tmin = ppt
+
+# Run through points and get data from daymet
+for (i in 1:nrow(plots)){
+  dmt <- download_daymet(site = "Daymet", lat = plots$latitude[i], 
+                         lon = plots$longitude[i],start = 1991,end = 2020, 
+                         internal = TRUE,silent = TRUE) 
+  # Add month column
+  dmt$data$month <- month 
+  # Create data frame
+  ppt[i,2:13] = tapply(dmt$data$prcp..mm.day., dmt$data$month, 
+                       FUN = function(x){sum(x)/30})
+  tmax[i,2:13] = tapply(dmt$data$tmax..deg.c., dmt$data$month, mean)
+  tmin[i,2:13] = tapply(dmt$data$tmin..deg.c., dmt$data$month, mean)
+}
+
+# Put map and mat onto coords
+plots$map <- apply(ppt[2:13], 1, sum)
+plots$mat <- apply(cbind(tmin[,2:13],tmax[,2:13]), 1, mean)
+
+# Check tmax and tmin are set up the same and calculate tavg
+table(tmax$plot == tmin$plot)
+
+# Set up tavg dataframe & calculate tavg from tmax and tmin
+tavg <- tmax[0,]
+for (i in 1:51){
+  tavg[i,] <- rep(NA, 13)
+  tavg$plot[i] <- tmax$plot[i]
+  tavg[i,2:13] <- apply(rbind(tmax[i,2:13], tmin[i,2:13]), 2, mean)
+}
+
+# Change names to add to plot df
+names(ppt)[2:13] <- paste0(names(ppt)[2:13],"_ppt")
+names(tavg)[2:13] <- paste0(names(tavg)[2:13],"_tavg")
+
+# Ensure plot order is the same
+table(plots$plot == tavg$plot)
+table(plots$plot == ppt$plot)
+
+# Add onto plots df
+plots1 <- merge(plots, ppt, by="plot")
+plots <- merge(plots1, tavg, by="plot")
+
+# Save updated plots DF
+write.csv(plots, file.path(datadir,"plots.csv"), row.names = FALSE)
+
+################################################################################
+# Step 2: Summarize vegetation, soil water, and climate variables
 
 # Read in code files with functions to calculate RIIs
 source(file.path(codedir, "lpi.R"))
-
-# Read in plots file
-plots <- read.csv(file.path(datadir, "plots.csv"))
 
 # Summarize climate
 summary(plots$map)
@@ -87,7 +149,7 @@ summary(plots$prop_shallow)
 # 0.3254  0.4355  0.4789  0.4847  0.5309  0.6909 
 
 ################################################################################
-# Step 2: Summarize dung
+# Step 3: Summarize dung
 
 # Read in dung
 dung <- read.csv(file.path(datadir, "dung.csv"))

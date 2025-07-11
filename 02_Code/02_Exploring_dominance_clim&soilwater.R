@@ -48,42 +48,16 @@ cover1$dominance <- (cover1$SH - cover1$PG)/(cover1$SH + cover1$PG)
 
 
 ################################################################################
-# Step 2: Get climate data for Sala et al. 1997 model
+# Step 2: Calculate monthly PPT, TEMP correlation for Sala et al. 1997 model
 
-# Read in precip and temp
-ppt <- read.csv(file.path(datadir, "ppt.csv"))
-tmax <- read.csv(file.path(datadir, "tmax.csv"))
-tmin <- read.csv(file.path(datadir, "tmin.csv"))
-
-# Calculate tavg
-table(tmax$plot == tmin$plot)
-
-# Set up tavg dataframe & calculate tavg from tmax and tmin
-tavg <- tmax[0,]
-for (i in 1:51){
-  tavg[i,] <- rep(NA, 13)
-  tavg$plot[i] <- tmax$plot[i]
-  tavg[i,2:13] <- apply(rbind(tmax[i,2:13], tmin[i,2:13]), 2, mean)
-}
+# Check plots vs cover1 order
+table(plots$plot == cover1$plot)
 
 # Now calculate correlation
-table(cover1$plot == tavg$plot & tavg$plot == ppt$plot)
 cover1$CORR_PT <- NA
 for (i in 1:51){
-  m <- cor.test(t(ppt[i,2:13]), t(tavg[i,2:13]))
+  m <- cor.test(t(plots[i,24:35]), t(plots[i,36:47]))
   cover1$CORR_PT[i] <- m$estimate
-}
-
-# Read in soil texture
-st <- read.csv(file.path(datadir, "soiltexture.csv"))
-
-# Calculate average texture of top 30 cm
-cover1$sand <- NA
-cover1$clay <- NA
-for (i in 1:51){
-  thissoil <- st[st$plot == cover1$plot[i] & st$depth_1 < 31 & !is.na(st$depth_1), ]
-  cover1$sand[i] <- mean(thissoil$sand)
-  cover1$clay[i] <- mean(thissoil$clay)
 }
 
 # Calculate water holding capacity (theta_S) using the following equations from:
@@ -104,21 +78,22 @@ for (i in 1:51){
 
 # Set OM to 0.0025 (most dryland soils have low OM)
 OM = 0.0025
-theta_33t = -0.251*cover1$sand + 0.195*cover1$clay + 0.011*OM + 
-             0.006*(cover1$sand*OM) - 0.027*(cover1$clay*OM) +
-             0.452*(cover1$sand*cover1$clay) + 0.299
+theta_33t = -0.251*plots$sand + 0.195*plots$clay + 0.011*OM + 
+             0.006*(plots$sand*OM) - 0.027*(plots$clay*OM) +
+             0.452*(plots$sand*plots$clay) + 0.299
 
 theta_33 = theta_33t + (1.283*(theta_33t^2) - 0.374*theta_33t - 0.015)
 
-theta_S_33t = 0.278*cover1$sand + 0.034*cover1$clay + 0.022*OM - 
-              0.018*(cover1$sand*OM) - 0.027*(cover1$clay*OM) -
-              0.584*(cover1$sand*cover1$clay) + 0.078
+theta_S_33t = 0.278*plots$sand + 0.034*plots$clay + 0.022*OM - 
+              0.018*(plots$sand*OM) - 0.027*(plots$clay*OM) -
+              0.584*(plots$sand*plots$clay) + 0.078
 
 theta_S_33 = theta_S_33t + (0.636*theta_S_33t - 0.107)
 
-theta_S = theta_33 + theta_S_33 - 0.097*cover1$sand + 0.043
+theta_S = theta_33 + theta_S_33 - 0.097*plots$sand + 0.043
 
 # Add Water holding capacity (WHC) to cover
+table(cover1$plot == plots$plot)
 cover1$WHC <- theta_33
 
 # Set up color scheme to display dominance
@@ -133,9 +108,9 @@ cor.test(cover1$dominance, cover1$CORR_PT)
 # r = -0.36, p = 0.009
 cor.test(cover1$dominance, cover1$WHC)
 # r = -0.08, p = 0.595
-cor.test(cover1$dominance, cover1$sand)
+cor.test(cover1$dominance, plots$sand)
 # r = 0.13, p = 0.351
-cor.test(cover1$dominance, cover1$clay)
+cor.test(cover1$dominance, plots$clay)
 # r = -0.024, p = 0.870
 cor.test(cover1$dominance, plots$map)
 # r = -0.16, p = 0.266
@@ -368,3 +343,4 @@ lines(x = c(0.3,0.35), y = rep(-0.86,2), lwd = 3, col = "#8c510a")
 text(expression(R^2 ~ "= 0.29"), x = 0.67, y = 0.97)
 text("p < 0.001", x = 0.67, y = 0.84)
 dev.off()
+
