@@ -1,5 +1,6 @@
-#' Calculate species or functional type average cover, height, and number for 
-#' microsites (canopy and interspace) and canopy conditions (open and covered).
+#' pcomm_microsite: Calculate species or functional type average cover, height, 
+#' and number for microsites (canopy and interspace) and canopy conditions 
+#' (open and covered).
 #' 
 #' 
 #' 
@@ -115,8 +116,8 @@ pcomm_microsite <- function(pcomm, ftype, can_edge = FALSE){
 }
 
  
-#' Helper function for `pcomm_microsite`, calculates average cover, height, and 
-#' number as appropriate for microsites and canopy conditions
+#' pft_summary: Helper function for `pcomm_microsite`, calculates average cover, 
+#' height, and number as appropriate for microsites and canopy conditions
 #' 
 #' 
 #' 
@@ -225,8 +226,8 @@ pft_summary <- function(thispft, pcomm, thisft = ftypes[ft]){
   return(list(ms3,ca2))
 }
 
-#' Calculate relative interaction index for any pair of values from canopy and
-#' interspace microsites
+#' calculate_rii: Calculate relative interaction index for any pair of values 
+#' from canopy and interspace microsites
 #' 
 #' @param canopy Vector of values corresponding to plants in canopy microsites
 #'  (or in the 'canopy' condition, i.e., shrub canopy cover over plant).
