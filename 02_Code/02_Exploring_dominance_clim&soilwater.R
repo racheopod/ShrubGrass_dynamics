@@ -323,7 +323,7 @@ plots$dry_median <- as.numeric(plots$avg_trans_0_200cm < median(plots$avg_trans_
 summary(lm(cover1$dominance~plots$prop_shallow*plots$dry))
 # R2 = 0.29, p = 0.008, interaction not significant
 summary(lm(cover1$dominance~plots$prop_shallow+plots$dry))
-# R2 = 29, p < 0.001
+# R2 = 0.29, p < 0.001
 
 # Now try using median of avg_trans
 summary(lm(cover1$dominance~plots$prop_shallow*plots$dry_median))
