@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Data, code, and Figures for *Soil water depth distribution and species interactions mediate plant functional type dominance in drylands*
 
 #### Renne, Rachel R., Burke, Ingrid C., & Lauenroth, William K.
@@ -12,7 +6,7 @@ editor_options:
 
 #### Repository created by Rachel R. Renne
 
-------------------------------------------------------------------------
+---
 
 This repository includes the full analysis for our study on how soil
 water amount and depth distribution determines shrub-grass dominance and
@@ -28,22 +22,18 @@ Raw field data and summarized simulation output results can be found in
 
 Scripts are numbered in order of the analysis:
 
--   `01_Summarize_vegetation&climate.R`
+- `01_Summarize_vegetation&climate.R` 
+- `02_Exploring_dominance_clim&soilwater.R`
+- `03_Exploring_RII_clim&soilwater.R`
+- `04_Vegetation sensitivity_analysis.code.R`
+- `05_Shallow_depth_test.R`
 
--   `02_Exploring_dominance_clim&soilwater.R`
-
--   `03_Exploring_RII_clim&soilwater.R`
-
--   `04_Vegetation sensitivity_analysis.code.R`
-
--   `05_Shallow_depth_test.R`
 
 Additional scripts containing functions called in the analysis scripts
 include:
 
--   `lpi.R`
-
--   `plantcommunity.R`
+- `lpi.R`
+- `plantcommunity.R`
 
 Figures generated for the publication and supplemental information are
 found in `03_Figures/Figures for submission`.
