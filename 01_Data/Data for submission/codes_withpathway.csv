@@ -1,0 +1,464 @@
+code,Scientific.Name.with.Author,Common.Name,Family,FunctionalType,GrowthForm
+YUGL,Yucca glauca Nutt.,soapweed yucca,Agavaceae,SUC,SUC
+CYAC,Cymopterus acaulis (Pursh) Raf.,plains springparsley,Apiaceae,PF,PF
+CYCO4,Cymopterus corrugatus M.E. Jones,wrinklewing springparsley,Apiaceae,PF,PF
+CYIB,Cymopterus ibapensis M.E. Jones,Ibapah springparsley,Apiaceae,PF,PF
+CYJO,Cymopterus jonesii J.M. Coult. & Rose,Jones' springparsley,Apiaceae,PF,PF
+CYPU,Cymopterus purpurascens (A. Gray) M.E. Jones,widewing springparsley,Apiaceae,PF,PF
+LOFO,Lomatium foeniculaceum (Nutt.) J.M. Coult. & Rose,desert biscuitroot,Apiaceae,PF,PF
+LOMA3,Lomatium macrocarpum (Nutt. ex Torr. & A. Gray) J.M. Coult. & Rose,bigseed biscuitroot,Apiaceae,PF,PF
+LONE,Lomatium nevadense (S. Watson) J.M. Coult. & Rose,Nevada biscuitroot,Apiaceae,PF,PF
+LOMATPF,Lomatium Raf.,desertparsley,Apiaceae,PF,PF
+LOSI2,Lomatium simplex (Nutt.) J.F. Macbr.,Great Basin desertparsley,Apiaceae,PF,PF
+LOTR2,Lomatium triternatum (Pursh) J.M. Coult. & Rose,nineleaf biscuitroot,Apiaceae,PF,PF
+LOVA,Lomatium vaginatum J.M. Coult. & Rose,broadsheath desertparsley,Apiaceae,PF,PF
+OSOC,Osmorhiza occidentalis (Nutt. ex Torr. & A. Gray) Torr.,western sweetroot,Apiaceae,PF,PF
+PEGA3,Perideridia gairdneri (Hook. & Arn.) Mathias,Gardner's yampah,Apiaceae,PF,PF
+ACMI2,Achillea millefolium L.,common yarrow,Asteraceae,PF,PF
+AGGL,Agoseris glauca (Pursh) Raf.,pale agoseris,Asteraceae,PF,PF
+AGOSEPF,Agoseris Raf.,agoseris,Asteraceae,PF,PF
+ANAN2,Antennaria anaphaloides Rydb.,pearly pussytoes,Asteraceae,PF,PF
+ANDI2,Antennaria dimorpha (Nutt.) Torr. & A. Gray,low pussytoes,Asteraceae,PF,PF
+ANTENPF,Antennaria Gaertn.,pussytoes,Asteraceae,PF,PF
+ANGE3,Antennaria geyeri A. Gray,pinewoods pussytoes,Asteraceae,PF,PF
+ANMI3,Antennaria microphylla Rydb.,littleleaf pussytoes,Asteraceae,PF,PF
+ANPA4,Antennaria parvifolia Nutt.,small-leaf pussytoes,Asteraceae,PF,PF
+ARSO2,Arnica sororia Greene,twin arnica,Asteraceae,PF,PF
+ARARA,Artemisia arbuscula Nutt. ssp. arbuscula,little sagebrush,Asteraceae,SH,SH
+ARCA13,Artemisia cana Pursh,silver sagebrush,Asteraceae,SH,SH
+ARDR4,Artemisia dracunculus L.,tarragon,Asteraceae,PF,PF
+ARFR4,Artemisia frigida Willd.,prairie sagewort,Asteraceae,SSH,SSH
+ARLU,Artemisia ludoviciana Nutt.,white sagebrush,Asteraceae,PF,PF
+ARNO4,Artemisia nova A. Nelson,black sagebrush,Asteraceae,SH,SH
+ARTRT,Artemisia tridentata Nutt. ssp. tridentata,basin big sagebrush,Asteraceae,ARTR,SH
+ARTRV,Artemisia tridentata Nutt. ssp. vaseyana (Rydb.) Beetle,mountain big sagebrush,Asteraceae,ARTR,SH
+ARTRW8,Artemisia tridentata Nutt. ssp. wyomingensis Beetle & Young,Wyoming big sagebrush,Asteraceae,ARTR,SH
+ARTRT2,Artemisia tripartita Rydb. ssp. tripartita,threetip sagebrush,Asteraceae,SH,SH
+BAPL3,Baileya pleniradiata Harv. & A. Gray ex A. Gray,woolly desert marigold,Asteraceae,PF,PF
+BACA3,Balsamorhiza careyana A. Gray,Carey's balsamroot,Asteraceae,PF,PF
+BASA3,Balsamorhiza sagittata (Pursh) Nutt.,arrowleaf balsamroot,Asteraceae,PF,PF
+CEST8,Centaurea stoebe L.,spotted knapweed,Asteraceae,PF,PF
+CHDO,Chaenactis douglasii (Hook.) Hook. & Arn.,Douglas' dustymaiden,Asteraceae,PF,PF
+CHST,Chaenactis stevioides Hook. & Arn.,Esteve's pincushion,Asteraceae,AF,AF
+CHER2,Chaetopappa ericoides (Torr.) G.L. Nesom,rose heath,Asteraceae,PF,PF
+CHVA2,Chrysothamnus vaseyi (A. Gray) Greene,Vasey's rabbitbrush,Asteraceae,SH,SH
+CHVI8,Chrysothamnus viscidiflorus (Hook.) Nutt.,yellow rabbitbrush,Asteraceae,SH,SH
+CISU,Cirsium subniveum Rydb.,Jackson Hole thistle,Asteraceae,PF,PF
+CRAC2,Crepis acuminata Nutt.,tapertip hawksbeard,Asteraceae,PF,PF
+CRAT,Crepis atribarba A. Heller,slender hawksbeard,Asteraceae,PF,PF
+CREPIPF,Crepis L. ,hawksbeard,Asteraceae,PF,PF
+CRMO4,Crepis modocensis Greene,Modoc hawksbeard,Asteraceae,PF,PF
+CROC,Crepis occidentalis Nutt.,largeflower hawksbeard,Asteraceae,PF,PF
+ERNA10,Ericameria nauseosa (Pall. ex Pursh) G.L. Nesom & Baird,rubber rabbitbrush,Asteraceae,SH,SH
+ERAP,Erigeron aphanactis (A. Gray) Greene,rayless shaggy fleabane,Asteraceae,PF,PF
+ERAR3,Erigeron argentatus A. Gray,silver fleabane,Asteraceae,PF,PF
+ERCO4,Erigeron compositus Pursh,cutleaf daisy,Asteraceae,PF,PF
+ERCO5,Erigeron corymbosus Nutt.,longleaf fleabane,Asteraceae,PF,PF
+ERDI4,Erigeron divergens Torr. & A. Gray,spreading fleabane,Asteraceae,AF,AF
+EREA,Erigeron eatonii A. Gray,Eaton's fleabane,Asteraceae,PF,PF
+EREN,Erigeron engelmannii A. Nelson,Engelmann's fleabane,Asteraceae,PF,PF
+ERFI2,Erigeron filifolius (Hook.) Nutt.,threadleaf fleabane,Asteraceae,PF,PF
+ERGR2,Erigeron gracilis Rydb.,quill fleabane,Asteraceae,PF,PF
+ERIGE2PF,Erigeron L.,fleabane,Asteraceae,PF,PF
+ERLI,Erigeron linearis (Hook.) Piper,desert yellow fleabane,Asteraceae,PF,PF
+EROC,Erigeron ochroleucus Nutt.,buff fleabane,Asteraceae,PF,PF
+ERPU2,Erigeron pumilus Nutt.,shaggy fleabane,Asteraceae,PF,PF
+ERRY,Erigeron rydbergii Cronquist,Rydberg's fleabane,Asteraceae,PF,PF
+ERSP4,Erigeron speciosus (Lindl.) DC.,aspen fleabane,Asteraceae,PF,PF
+ERSU2,Erigeron subtrinervis Rydb. ex Porter & Britton,threenerve fleabane,Asteraceae,PF,PF
+ERTW,Erigeron tweedyi Canby,Tweedy's fleabane,Asteraceae,PF,PF
+ERLA6,Eriophyllum lanatum (Pursh) Forbes,common woolly sunflower,Asteraceae,PF,PF
+EUIN9,Eurybia integrifolia (Nutt.) G.L. Nesom,thickstem aster,Asteraceae,PF,PF
+GAAR,Gaillardia aristata Pursh,blanketflower,Asteraceae,PF,PF
+GUSA2,Gutierrezia sarothrae (Pursh) Britton & Rusby,broom snakeweed,Asteraceae,SSH,SSH
+HEVI4,Heterotheca villosa (Pursh) Shinners,hairy false goldenaster,Asteraceae,PF,PF
+HISC2,Hieracium scouleri Hook.,Scouler's woollyweed,Asteraceae,PF,PF
+HYRI,Hymenoxys richardsonii (Hook.) Cockerell,pingue rubberweed,Asteraceae,PF,PF
+IOAL,Ionactis alpina (Nutt.) Greene,Lava aster,Asteraceae,PF,PF
+LASE,Lactuca serriola L.,prickly lettuce,Asteraceae,AF,AF
+LASO2,Laennecia sophiifolia (Kunth) G.L. Nesom,leafy horseweed,Asteraceae,AF,AF
+LAGL5,Layia glandulosa (Hook.) Hook. & Arn.,whitedaisy tidytips,Asteraceae,AF,AF
+LOAR5,Logfia arvensis (L.) Holub,field cottonrose,Asteraceae,AF,AF
+MACA2,Machaeranthera canescens (Pursh) A. Gray,hoary tansyaster,Asteraceae,PF,PF
+MAGR2,Machaeranthera grindelioides (Nutt.) Shinners,rayless tansyaster,Asteraceae,PF,PF
+MATA2,Machaeranthera tanacetifolia (Kunth) Nees,tanseyleaf tansyaster,Asteraceae,AF,AF
+MINU,Microseris nutans (Hook.) Sch. Bip.,nodding microseris,Asteraceae,PF,PF
+NOTR2,Nothocalais troximoides (A. Gray) Greene,sagebrush false dandelion,Asteraceae,PF,PF
+PACA15,Packera cana (Hook.) W.A. Weber & A. Love,woolly groundsel,Asteraceae,PF,PF
+PAMU11,Packera multilobata (Torr. & A. Gray ex A. Gray) W.A. Weber & A. Love ,lobeleaf groundsel,Asteraceae,PF,PF
+PAST10,Packera streptanthifolia (Greene) W.A. Weber & A. Love,Rocky Mountain groundsel,Asteraceae,PF,PF
+PIDE4,Picrothamnus desertorum Nutt.,bud sagebrush,Asteraceae,SH,SH
+PLSP7,Pleiacanthus spinosus (Nutt.) Rydb.,thorn skeletonweed,Asteraceae,SSH,SSH
+SEIN2,Senecio integerrimus Nutt.,lambstongue ragwort,Asteraceae,PF,PF
+SOMI2,Solidago missouriensis Nutt.,Missouri goldenrod,Asteraceae,PF,PF
+STAC,Stenotus acaulis (Nutt.) Nutt.,stemless mock goldenweed,Asteraceae,PF,PF
+STAR10,Stenotus armerioides Nutt.,thrift mock goldenweed,Asteraceae,PF,PF
+SYER,Symphyotrichum ericoides (L.) G.L. Nesom,white heath aster,Asteraceae,PF,PF
+SYFO2,Symphyotrichum foliaceum (Lindl. ex DC.) G.L. Nesom,alpine leafybract aster,Asteraceae,PF,PF
+SYMPH4PF,Symphyotrichum Nees,aster,Asteraceae,PF,PF
+TALA2,Taraxacum laevigatum (Willd.) DC.,rock dandelion,Asteraceae,PF,PF
+TECA2,Tetradymia canescens DC.,spineless horsebrush,Asteraceae,SH,SH
+TEGL,Tetradymia glabrata Torr. & A. Gray,littleleaf horsebrush,Asteraceae,SH,SH
+TENU2,Tetradymia nuttallii Torr. & A. Gray,Nuttall's horsebrush,Asteraceae,SH,SH
+TESP2,Tetradymia spinosa Hook. & Arn.,shortspine horsebrush,Asteraceae,SH,SH
+TEAC,Tetraneuris acaulis (Pursh) Greene,stemless four-nerve daisy,Asteraceae,PF,PF
+TOFL5,Townsendia florifer (Hook.) A. Gray,showy Townsend daisy,Asteraceae,AF,AF
+TOWNSPF,Townsendia Hook.,Townsend daisy,Asteraceae,PF,PF
+TOIN,Townsendia incana Nutt.,hoary Townsend daisy,Asteraceae,PF,PF
+TRDU,Tragopogon dubius Scop.,yellow salsify,Asteraceae,AF,AF
+MARE11,Mahonia repens (Lindl.) G. Don,creeping barberry,Berberidaceae,SH,SH
+AMTE3,Amsinckia tessellata A. Gray,bristly fiddleneck,Boraginaceae,AF,AF
+CRAM3,Cryptantha ambigua (A. Gray) Greene,basin cryptantha,Boraginaceae,AF,AF
+CRCI3,Cryptantha cinerea (Greene) Cronquist,James' cryptantha,Boraginaceae,PF,PF
+CRCI2,Cryptantha circumscissa (Hook. & Arn.) I.M. Johnst.,cushion cryptantha,Boraginaceae,AF,AF
+CRFE3,Cryptantha fendleri (A. Gray) Greene,sanddune cryptantha,Boraginaceae,AF,AF
+CRHU2,Cryptantha humilis (A. Gray) Payson,roundspike cryptantha,Boraginaceae,PF,PF
+CRYPTAF,Cryptantha Lehm. Ex G. Don,cryptantha,Boraginaceae,AF,AF
+CRYPTPF,Cryptantha Lehm. Ex G. Don,cryptantha,Boraginaceae,PF,PF
+CRPT,Cryptantha pterocarya (Torr.) Greene,wingnut cryptantha,Boraginaceae,AF,AF
+CRRU4,Cryptantha rugulosa (Payson) Payson,wrinkled cryptantha,Boraginaceae,PF,PF
+CRSP4,Cryptantha spiculifera (Piper) Payson,Snake River cryptantha,Boraginaceae,PF,PF
+CRTO4,Cryptantha torreyana (A. Gray) Greene,Torrey's cryptantha,Boraginaceae,AF,AF
+CRWA2,Cryptantha watsonii (A. Gray) Greene,Watson's cryptantha,Boraginaceae,AF,AF
+HAMI,Hackelia micrantha (Eastw.) J.L. Gentry,Jessica sticktight,Boraginaceae,PF,PF
+LAOC3,Lappula occidentalis (S. Watson) Greene,flatspine stickseed,Boraginaceae,AF,AF
+LIIN2,Lithospermum incisum Lehm.,narrowleaf stoneseed,Boraginaceae,PF,PF
+LIRU4,Lithospermum ruderale Douglas ex Lehm.,western stoneseed,Boraginaceae,PF,PF
+MEOB,Mertensia oblongifolia (Nutt.) G. Don,oblongleaf bluebells,Boraginaceae,PF,PF
+ALAL3,Alyssum alyssoides (L.) L.,pale madwort,Brassicaceae,AF,AF
+ALDE,Alyssum desertorum Stapf,desert madwort,Brassicaceae,AF,AF
+ARDR,Arabis drummondii A. Gray,Drummond's rockcress,Brassicaceae,PF,PF
+ARHO2,Arabis holboellii Hornem.,Holboell's rockcress,Brassicaceae,PF,PF
+ARPE10,Arabis holboellii Hornem.,Holboell's rockcress,Brassicaceae,PF,PF
+ARABI2PF,Arabis L.,rockcress,Brassicaceae,PF,PF
+ARLE,Arabis lemmonii S. Watson,Lemmon's rockcress,Brassicaceae,PF,PF
+ARLI,Arabis lignifera A. Nelson,desert rockcress,Brassicaceae,PF,PF
+ARPU,Arabis puberula Nutt.,silver rockcress,Brassicaceae,PF,PF
+ARSC2,Arabis schistacea Rollins,divided rockcress,Brassicaceae,PF,PF
+ARSP,Arabis sparsiflora Nutt.,sicklepod rockcress,Brassicaceae,PF,PF
+ARDI2,Arabis xdivaricarpa A. Nelson (pro sp.),spreadingpod rockcress,Brassicaceae,PF,PF
+CACR11,Caulanthus crassicaulis (Torr.) S. Watson,thickstem wild cabbage,Brassicaceae,PF,PF
+CHTE2,Chorispora tenella (Pall.) DC.,crossflower,Brassicaceae,AF,AF
+DEIN5,Descurainia incana (Bernh. ex Fisch. & C.A. Mey.) Dorn,mountain tansymustard,Brassicaceae,PF,PF
+DEPA14,Descurainia paradisa (A. Nelson & Kennedy) O.E. Schulz,paradise tansymustard,Brassicaceae,AF,AF
+DEPI,Descurainia pinnata (Walter) Britton,western tansymustard,Brassicaceae,AF,AF
+DESO2,Descurainia sophia (L.) Webb ex Prantl,herb sophia,Brassicaceae,AF,AF
+DRABAAF,Draba L.,draba,Brassicaceae,AF,AF
+DRRE2,Draba reptans (Lam.) Fernald,Carolina draba,Brassicaceae,AF,AF
+DRVE2,Draba verna L.,spring draba,Brassicaceae,AF,AF
+ERAS2,Erysimum asperum (Nutt.) DC.,western wallflower,Brassicaceae,PF,PF
+ERCA14,Erysimum capitatum (Douglas ex Hook.) Greene,sanddune wallflower,Brassicaceae,PF,PF
+LEDE,Lepidium densiflorum Schrad.,common pepperweed,Brassicaceae,AF,AF
+LEPE2,Lepidium perfoliatum L.,clasping pepperweed,Brassicaceae,AF,AF
+LEAR6,Lesquerella arenosa (Richardson) Rydb.,Great Plains bladderpod,Brassicaceae,PF,PF
+LECO7,Lesquerella cordiformis (Rollins) Rollins & Shaw,Wassuk Range bladderpod,Brassicaceae,PF,PF
+LEMO3,Lesquerella montana (A. Gray) S. Watson,mountain bladderpod,Brassicaceae,PF,PF
+SCLI,Schoenocrambe linifolia (Nutt.) Greene,flaxleaf plainsmustard,Brassicaceae,PF,PF
+SIAL2,Sisymbrium altissimum L.,tall tumblemustard,Brassicaceae,AF,AF
+STLO4,Streptanthella longirostris (S. Watson) Rydb.,longbeak streptanthella,Brassicaceae,AF,AF
+STCO6,Streptanthus cordatus Nutt.,heartleaf twistflower,Brassicaceae,PF,PF
+ESMI3,Escobaria missouriensis (Sweet) D.R. Hunt,Missouri foxtail cactus,Cactaceae,SUC,SUC
+ESVI2,Escobaria vivipara (Nutt.) Buxbaum,spinystar,Cactaceae,SUC,SUC
+OPPO,Opuntia polyacantha Haw.,plains pricklypear,Cactaceae,SUC,SUC
+PESI,Pediocactus simpsonii (Engelm.) Britton & Rose,mountain ball cactus,Cactaceae,SUC,SUC
+CARO2,Campanula rotundifolia L.,bluebell bellflower,Campanulaceae,PF,PF
+SYMPHSH,Symphoricarpos Duham.,snowberry,Caprifoliaceae,SH,SH
+SYOC,Symphoricarpos occidentalis Hook.,western snowberry,Caprifoliaceae,SH,SH
+SYRO,Symphoricarpos rotundifolius A. Gray,roundleaf snowberry,Caprifoliaceae,SH,SH
+ARCO5,Arenaria congesta Nutt.,ballhead sandwort,Caryophyllaceae,PF,PF
+ARHO4,Arenaria hookeri Nutt.,Hooker's sandwort,Caryophyllaceae,PF,PF
+CEAR4,Cerastium arvense L.,field chickweed,Caryophyllaceae,PF,PF
+CENU2,Cerastium nutans Raf.,nodding chickweed,Caryophyllaceae,AF,AF
+HOUM,Holosteum umbellatum L.,jagged chickweed,Caryophyllaceae,AF,AF
+SIDR,Silene drummondii Hook.,Drummond's campion,Caryophyllaceae,PF,PF
+ATCA2,Atriplex canescens (Pursh) Nutt.,fourwing saltbush,Chenopodiaceae,SH,SH
+ATCO,Atriplex confertifolia (Torr. & FrÃ©m.) S. Watson,shadscale saltbush,Chenopodiaceae,SH,SH
+BAAM4,Bassia americana (S. Watson) A.J. Scott,green molly,Chenopodiaceae,SSH,SSH
+BASC5,Bassia scoparia (L.) A.J. Scott,burningbush,Chenopodiaceae,AF,AF
+CHFR3,Chenopodium fremontii S. Watson,Fremont's goosefoot,Chenopodiaceae,AF,AF
+CHENOAF,Chenopodium L.,goosefoot,Chenopodiaceae,AF,AF
+CHLE4,Chenopodium leptophyllum (Moq.) Nutt. ex S. Watson,narrowleaf goosefoot,Chenopodiaceae,AF,AF
+CHPR5,Chenopodium pratericola Rydb.,desert goosefoot,Chenopodiaceae,AF,AF
+GRSP,Grayia spinosa (Hook.) Moq.,spiny hopsage,Chenopodiaceae,SH,SH
+HAGL,Halogeton glomeratus (M. Bieb.) C.A. Mey.,saltlover,Chenopodiaceae,AF,AF
+KRLA2,Krascheninnikovia lanata (Pursh) A. Meeuse & Smit,winterfat,Chenopodiaceae,SH,SH
+SELA,Sedum lanceolatum Torr.,spearleaf stonecrop,Crassulaceae,SUC,SUC
+JUCO6,Juniperus communis L.,common juniper,Cupressaceae,TR,TR
+JUOC,Juniperus occidentalis Hook.,western juniper,Cupressaceae,TR,TR
+JUOS,Juniperus osteosperma (Torr.) Little,Utah juniper,Cupressaceae,TR,TR
+CADO2,Carex douglasii Boott,Douglas' sedge,Cyperaceae,PSE,PG
+CADU6,Carex duriuscula C.A. Mey.,needleleaf sedge,Cyperaceae,PSE,PG
+CAFI,Carex filifolia Nutt.,threadleaf sedge,Cyperaceae,PSE,PG
+CAREXPG,Carex L.,sedge,Cyperaceae,PSE,PG
+CAPE7,Carex petasata Dewey,Liddon sedge,Cyperaceae,PSE,PG
+CARO5,Carex rossii Boott,Ross' sedge,Cyperaceae,PSE,PG
+CAVA3,Carex vallicola Dewey,valley sedge,Cyperaceae,PSE,PG
+EPNE,Ephedra nevadensis S. Watson,Nevada jointfir,Ephedraceae,SH,SH
+EPVI,Ephedra viridis Coville,mormon tea,Ephedraceae,SH,SH
+CHFE3,Chamaesyce fendleri (Torr. & A. Gray) Small,Fendler's sandmat,Euphorbiaceae,PF,PF
+CHPA28,Chamaesyce parryi (Engelm.) Rydb.,Parry's sandmat,Euphorbiaceae,AF,AF
+CHAMA15AF,Chamaesyce Gray,sandmat,Euphorbiaceae,AF,AF
+ASAG2,Astragalus agrestis Douglas ex G. Don,purple milkvetch,Fabaceae,PF,PF
+ASAR4,Astragalus argophyllus Nutt.,silverleaf milkvetch,Fabaceae,PF,PF
+ASAT,Astragalus atratus S. Watson,mourning milkvetch,Fabaceae,PF,PF
+ASCA9,Astragalus calycosus Torr. ex S. Watson,Torrey's milkvetch,Fabaceae,PF,PF
+ASCI2,Astragalus cibarius Sheldon,browse milkvetch,Fabaceae,PF,PF
+ASCO12,Astragalus convallarius Greene,lesser rushy milkvetch,Fabaceae,PF,PF
+ASDR3,Astragalus drummondii Douglas ex Hook.,Drummond's milkvetch,Fabaceae,PF,PF
+ASFI,Astragalus filipes Torr. ex A. Gray,basalt milkvetch,Fabaceae,PF,PF
+ASFL2,Astragalus flexuosus Douglas ex G. Don,flexile milkvetch,Fabaceae,PF,PF
+ASGE,Astragalus geyeri A. Gray,Geyer's milkvetch,Fabaceae,AF,AF
+ASGI5,Astragalus gilviflorus Sheldon,plains milkvetch,Fabaceae,PF,PF
+ASKE,Astragalus kentrophyta A. Gray,spiny milkvetch,Fabaceae,PF,PF
+ASTRAPF,Astragalus L.,milkvetch,Fabaceae,PF,PF
+ASLE8,Astragalus lentiginosus Douglas ex Hook.,freckled milkvetch,Fabaceae,PF,PF
+ASLO4,Astragalus lotiflorus Hook.,lotus milkvetch,Fabaceae,PF,PF
+ASMA6,Astragalus malacus A. Gray,shaggy milkvetch,Fabaceae,PF,PF
+ASMI9,Astragalus miser Douglas ex Hook.,timber milkvetch,Fabaceae,PF,PF
+ASOR2,Astragalus oreganus Nutt.,Oregon milkvetch,Fabaceae,PF,PF
+ASPU9,Astragalus purshii Douglas ex Hook.,woollypod milkvetch,Fabaceae,PF,PF
+ASSH3,Astragalus shortianus Nutt.,Short's milkvetch,Fabaceae,PF,PF
+ASSP4,Astragalus spaldingii A. Gray,Spalding's milkvetch,Fabaceae,PF,PF
+ASSP6,Astragalus spatulatus Sheldon,tufted milkvetch,Fabaceae,PF,PF
+ASTE10,Astragalus tetrapterus A. Gray,fourwing milkvetch,Fabaceae,PF,PF
+ASUT,Astragalus utahensis (Torr.) Torr. & A. Gray,Utah milkvetch,Fabaceae,PF,PF
+LUAR6,Lupinus arbustus Douglas ex Lindl.,longspur lupine,Fabaceae,PF,PF
+LUAR3,Lupinus argenteus Pursh,silvery lupine,Fabaceae,PF,PF
+LUBR2,Lupinus brevicaulis S. Watson,shortstem lupine,Fabaceae,AF,AF
+LUPINAF,Lupinus L.,lupine,Fabaceae,AF,AF
+LULE2,Lupinus lepidus Douglas ex Lindl.,Pacific lupine,Fabaceae,PF,PF
+LULE3,Lupinus leucophyllus Douglas ex Lindl.,velvet lupine,Fabaceae,PF,PF
+LUPO2,Lupinus polyphyllus Lindl.,bigleaf lupine,Fabaceae,PF,PF
+LUPU,Lupinus pusillus Pursh,rusty lupine,Fabaceae,AF,AF
+LUSE4,Lupinus sericeus Pursh,silky lupine,Fabaceae,PF,PF
+LUUN,Lupinus uncialis S. Watson,inchhigh lupine,Fabaceae,AF,AF
+OXLA2,Oxytropis lagopus Nutt.,haresfoot locoweed,Fabaceae,PF,PF
+OXSE,Oxytropis sericea Nutt.,white locoweed,Fabaceae,PF,PF
+PSLA3,Psoralidium lanceolatum (Pursh) Rydb.,lemon scurfpea,Fabaceae,PF,PF
+PSTE5,Psoralidium tenuiflorum (Pursh) Rydb.,slimflower scurfpea,Fabaceae,PF,PF
+TRGY,Trifolium gymnocarpon Nutt.,hollyleaf clover,Fabaceae,PF,PF
+VIAM,Vicia americana Muhl. ex Willd.,American vetch,Fabaceae,PF,PF
+ERCI6,Erodium cicutarium (L.) L'HÃ©r. ex Aiton,redstem stork's bill,Geraniaceae,AF,AF
+GEVI2,Geranium viscosissimum Fisch. & C.A. Mey. ex C.A. Mey.,sticky purple geranium,Geraniaceae,PF,PF
+RICE,Ribes cereum Douglas,wax currant,Grossulariaceae,SH,SH
+HYCA4,Hydrophyllum capitatum Douglas ex Benth.,ballhead waterleaf,Hydrophyllaceae,PF,PF
+NAAR,Nama aretioides (Hook. & Arn.) Brand,ground nama,Hydrophyllaceae,AF,AF
+NEBR,Nemophila breviflora A. Gray,basin nemophila,Hydrophyllaceae,AF,AF
+PHGL2,Phacelia glandulifera Piper,sticky phacelia,Hydrophyllaceae,AF,AF
+PHHA,Phacelia hastata Douglas ex Lehm.,silverleaf phacelia,Hydrophyllaceae,PF,PF
+PHIN9,Phacelia incana Brand,hoary phacelia,Hydrophyllaceae,AF,AF
+PHLI,Phacelia linearis (Pursh) Holz.,threadleaf phacelia,Hydrophyllaceae,AF,AF
+PHTE,Phacelia tetramera J.T. Howell,fourpart phacelia,Hydrophyllaceae,AF,AF
+AGUR,Agastache urticifolia (Benth.) Kuntze,nettleleaf giant hyssop,Lamiaceae,PF,PF
+HEHI,Hedeoma hispida Pursh,rough false pennyroyal,Lamiaceae,AF,AF
+ALAC4,Allium acuminatum Hook.,tapertip onion,Liliaceae,PF,PF
+ALAT,Allium atrorubens S. Watson,darkred onion,Liliaceae,PF,PF
+ALCE2,Allium cernuum Roth,nodding onion,Liliaceae,PF,PF
+ALLIUPF,Allium L.,onion,Liliaceae,PF,PF
+ALTE,Allium textile A. Nelson & J.F. Macbr.,textile onion,Liliaceae,PF,PF
+ANBR4,Androstephium breviflorum S. Watson,pink funnel lily,Liliaceae,PF,PF
+CAGU,Calochortus gunnisonii S. Watson,Gunnison's mariposa lily,Liliaceae,PF,PF
+CAMA5,Calochortus macrocarpus Douglas,sagebrush mariposa lily,Liliaceae,PF,PF
+CANU3,Calochortus nuttallii Torr. & A. Gray,sego lily,Liliaceae,PF,PF
+FRAT,Fritillaria atropurpurea Nutt.,spotted fritillary,Liliaceae,PF,PF
+FRPU2,Fritillaria pudica (Pursh) Spreng.,yellow fritillary,Liliaceae,PF,PF
+ZIVE,Zigadenus venenosus S. Watson,meadow deathcamas,Liliaceae,PF,PF
+LILE3,Linum lewisii Pursh,Lewis flax,Linaceae,PF,PF
+MEAL6,Mentzelia albicaulis (Hook.) Torr. & A. Gray,whitestem blazingstar,Loasaceae,AF,AF
+MEMO4,Mentzelia montana (Davidson) Davidson,variegated-bract blazingstar,Loasaceae,AF,AF
+SPAM2,Sphaeralcea ambigua A. Gray,desert globemallow,Malvaceae,PF,PF
+SPCO,Sphaeralcea coccinea (Nutt.) Rydb.,scarlet globemallow,Malvaceae,PF,PF
+SPGR2,Sphaeralcea grossulariifolia (Hook. & Arn.) Rydb.,gooseberryleaf globemallow,Malvaceae,PF,PF
+SPMU2,Sphaeralcea munroana (Douglas) Spach,Munro's globemallow,Malvaceae,PF,PF
+SPPA2,Sphaeralcea parvifolia A. Nelson,small-leaf globemallow,Malvaceae,PF,PF
+MIAL5,Mirabilis alipes (S. Watson) Pilz,winged four o'clock,Nyctaginaceae,PF,PF
+MESP2,Menodora spinescens A. Gray,spiny menodora,Oleaceae,SH,SH
+CACO34,Camissonia contorta (Douglas ex Lehm.) Kearney,plains evening primrose,Onagraceae,AF,AF
+CAMI23,Camissonia minor (A. Nelson) P.H. Raven,small evening primrose,Onagraceae,AF,AF
+CAPU16,Camissonia pusilla P.H. Raven,little wiry suncup,Onagraceae,AF,AF
+EPBR3,Epilobium brachycarpum C. Presl,tall annual willowherb,Onagraceae,AF,AF
+GADI2,Gayophytum diffusum Torr. & A. Gray,spreading groundsmoke,Onagraceae,AF,AF
+GARA2,Gayophytum ramosissimum Torr. & A. Gray,pinyon groundsmoke,Onagraceae,AF,AF
+OEAL,Oenothera albicaulis Pursh,whitest evening primrose,Onagraceae,AF,AF
+OECA10,Oenothera caespitosa Nutt.,tufted evening primrose,Onagraceae,PF,PF
+OEPA,Oenothera pallida Lindl.,pale evening primrose,Onagraceae,PF,PF
+OESU3,Oenothera suffrutescens (Ser.) W.L. Wagner & Hoch,scarlet beeblossom,Onagraceae,PF,PF
+ORCO5,Orobanche corymbosa (Rydb.) Ferris,flat-top broomrape,Orobanchaceae,AF,AF
+ORFA,Orobanche fasciculata Nutt.,clustered broomrape,Orobanchaceae,AF,AF
+ORLU,Orobanche ludoviciana Nutt.,Louisiana broomrape,Orobanchaceae,AF,AF
+CAAU2,Canbya aurea S. Watson,golden pygmypoppy,Papaveraceae,AF,AF
+PIMO,Pinus monophylla Torr. & FrÃ©m.,singleleaf pinyon,Pinaceae,TR,TR
+PIPO,Pinus ponderosa Lawson & C. Lawson,ponderosa pine,Pinaceae,TR,TR
+PSME,Pseudotsuga menziesii (Mirb.) Franco,Douglas-fir,Pinaceae,TR,TR
+PENSTPF,Penstemon Schmidel,beardtongue,Plantaginaceae,PF,PF
+PLPA2,Plantago patagonica Jacq.,woolly plantain,Plantaginaceae,AF,AF
+ACCO22,Achnatherum contractum (B.L. Johnson) Barkworth,contracted ricegrass,Poaceae,CBG,PG
+ACHY,Achnatherum hymenoides (Roem. & Schult.) Barkworth,Indian ricegrass,Poaceae,CBG,PG
+ACLE9,Achnatherum lettermanii (Vasey) Barkworth,Letterman's needlegrass,Poaceae,CBG,PG
+ACNE9,Achnatherum nelsonii (Scribn.) Barkworth,Columbia needlegrass,Poaceae,CBG,PG
+ACHNAPG,Achnatherum P. Beauv.,needlegrass,Poaceae,CBG,PG
+ACPI2,Achnatherum pinetorum (M.E. Jones) Barkworth,pine needlegrass,Poaceae,CBG,PG
+ACTH7,Achnatherum thurberianum (Piper) Barkworth,Thurber's needlegrass,Poaceae,CBG,PG
+AGCR,Agropyron cristatum (L.) Gaertn.,crested wheatgrass,Poaceae,CBG,PG
+ARPU9,Aristida purpurea Nutt.,purple threeawn,Poaceae,WBG,PG
+BOGR2,Bouteloua gracilis (Willd. ex Kunth) Lag. ex Griffiths,blue grama,Poaceae,WBG,PG
+BRAR5,Bromus arvensis L.,field brome,Poaceae,CAG,AG
+BRPO2,Bromus porteri (J.M. Coult.) Nash,Porter brome,Poaceae,CBG,PG
+BRSI,Bromus sitchensis Trin.,Alaska brome,Poaceae,CBG,PG
+BRTE,Bromus tectorum L.,cheatgrass,Poaceae,CAG,AG
+CALO,Calamovilfa longifolia (Hook.) Scribn.,prairie sandreed,Poaceae,WRG,PG
+DAUN,Danthonia unispicata (Thurb.) Munro ex Macoun,onespike danthonia,Poaceae,CBG,PG
+ELEL5,Elymus elymoides (Raf.) Swezey,squirreltail,Poaceae,CBG,PG
+ELLA3,Elymus lanceolatus (Scribn. & J.G. Sm.) Gould,thickspike wheatgrass,Poaceae,CRG,PG
+ELMU3,Elymus multisetus M.E. Jones,big squirreltail,Poaceae,CBG,PG
+FEID,Festuca idahoensis Elmer,Idaho fescue,Poaceae,CBG,PG
+HECO26,Hesperostipa comata (Trin. & Rupr.) Barkworth,needle and thread,Poaceae,CBG,PG
+KOMA,Koeleria macrantha (Ledeb.) Schult.,prairie Junegrass,Poaceae,CBG,PG
+LEKI2,Leucopoa kingii (S. Watson) W.A. Weber,spike fescue,Poaceae,CRG,PG
+LECI4,Leymus cinereus (Scribn. & Merr.) Ã. LÃ¶ve,basin wildrye,Poaceae,CRG,PG
+MEBU,Melica bulbosa Geyer ex Porter & J.M. Coult.,oniongrass,Poaceae,CRG,PG
+MUSQ3,Munroa squarrosa (Nutt.) Torr.,false buffalograss,Poaceae,WAG,AG
+NAVI4,Nassella viridula (Trin.) Barkworth,green needlegrass,Poaceae,CBG,PG
+PASM,Pascopyrum smithii (Rydb.) A. Love,western wheatgrass,Poaceae,CRG,PG
+PLJA,Pleuraphis jamesii Torr.,James' galleta,Poaceae,WRG,PG
+POBU,Poa bulbosa L.,bulbous bluegrass,Poaceae,CBG,PG
+POCO,Poa compressa L.,Canada bluegrass,Poaceae,CRG,PG
+POCU3,Poa cusickii Vasey,Cusick's bluegrass,Poaceae,CBG,PG
+POFE,Poa fendleriana (Steud.) Vasey,muttongrass,Poaceae,CBG,PG
+POPR,Poa pratensis L.,Kentucky bluegrass,Poaceae,CRG,PG
+POSE,Poa secunda J. Presl,Sandberg bluegrass,Poaceae,POSE,PG
+POWH2,Poa wheeleri Vasey,Wheeler's bluegrass,Poaceae,CBG,PG
+PSSP6,Pseudoroegneria spicata (Pursh) Ã. LÃ¶ve,bluebunch wheatgrass,Poaceae,CBG,PG
+SCPA,Schedonnardus paniculatus (Nutt.) Trel.,tumblegrass,Poaceae,WBG,PG
+SPCR,Sporobolus cryptandrus (Torr.) A. Gray,sand dropseed,Poaceae,WBG,PG
+VUMI,Vulpia microstachys (Nutt.) Munro,small fescue,Poaceae,CAG,AG
+VUOC,Vulpia octoflora (Walter) Rydb.,sixweeks fescue,Poaceae,CAG,AG
+ALLE7,Aliciella leptomeria (A. Gray) J.M. Porter,sand gilia,Polemoniaceae,AF,AF
+COLI2,Collomia linearis Nutt.,tiny trumpet,Polemoniaceae,AF,AF
+ERDI2,Eriastrum diffusum (A. Gray) H. Mason,miniature woollystar,Polemoniaceae,AF,AF
+ERSI2,Eriastrum signatum D. Gowen,marked woollystar,Polemoniaceae,AF,AF
+ERWI,Eriastrum wilcoxii (A. Nelson) H. Mason,Wilcox's woollystar,Polemoniaceae,AF,AF
+GIBR,Gilia brecciarum M.E. Jones,Nevada gilia,Polemoniaceae,AF,AF
+GIIN2,Gilia inconspicua (Sm.) Sweet,shy gilia,Polemoniaceae,AF,AF
+GISA,Gilia salticola Eastw.,salt gilia,Polemoniaceae,AF,AF
+GISI,Gilia sinuata Douglas ex Benth.,rosy gilia,Polemoniaceae,AF,AF
+GITW,Gilia tweedyi Rydb.,Tweedy's gila,Polemoniaceae,AF,AF
+GYPA2,Gymnosteris parvula A. Heller,smallflower gymnosteris,Polemoniaceae,AF,AF
+IPPO2,Ipomopsis polycladon (Torr.) V.E. Grant,manybranched ipomopsis,Polemoniaceae,AF,AF
+LATE6,Lathrocasis tenerrima (A. Gray) L.A. Johnson,delicate gilia,Polemoniaceae,AF,AF
+LEHA11,Leptosiphon harknessii (Curran) J.M. Porter & L.A. Johnson,Harkness' flaxflower,Polemoniaceae,AF,AF
+LESE17,Leptosiphon septentrionalis (H. Mason) J.M. Porter & L.A. Johnson,northern linanthus,Polemoniaceae,AF,AF
+LIPU11,Linanthus pungens (Torr.) J.M. Porter & L.A. Johnson,granite prickly phlox,Polemoniaceae,PF,PF
+MIGR,Microsteris gracilis (Hook.) Greene,slender phlox,Polemoniaceae,AF,AF
+PHAU3,Phlox austromontana Coville,mountain phlox,Polemoniaceae,PF,PF
+PHDI3,Phlox diffusa Benth.,spreading phlox,Polemoniaceae,PF,PF
+PHHO,Phlox hoodii Richardson,spiny phlox,Polemoniaceae,PF,PF
+PHLOXPF,Phlox L.,phlox,Polemoniaceae,PF,PF
+PHLO2,Phlox longifolia Nutt.,longleaf phlox,Polemoniaceae,PF,PF
+PHMU3,Phlox multiflora A. Nelson,flowery phlox,Polemoniaceae,PF,PF
+PHST11,Phlox stansburyi (Torr.) A. Heller,cold-desert phlox,Polemoniaceae,PF,PF
+CHWA2,Chorizanthe watsonii Torr. & A. Gray,fivetooth spineflower,Polygonaceae,AF,AF
+ERBA7,Eriogonum baileyi S. Watson,Bailey's buckwheat,Polygonaceae,AF,AF
+ERBR5,Eriogonum brevicaule Nutt.,shortstem buckwheat,Polygonaceae,PF,PF
+ERCA8,Eriogonum caespitosum Nutt.,matted buckwheat,Polygonaceae,PF,PF
+ERCE2,Eriogonum cernuum Nutt.,nodding buckwheat,Polygonaceae,AF,AF
+ERFA2,Eriogonum fasciculatum Benth.,Eastern Mojave buckwheat,Polygonaceae,SH,SH
+ERHE2,Eriogonum heracleoides Nutt.,parsnipflower buckwheat,Polygonaceae,PF,PF
+ERJA,Eriogonum jamesii Benth.,James' buckwheat,Polygonaceae,PF,PF
+ERIOGPF,Eriogonum Michx.,buckwheat,Polygonaceae,PF,PF
+ERMI4,Eriogonum microthecum Nutt.,slender buckwheat,Polygonaceae,SH,SH
+EROV,Eriogonum ovalifolium Nutt.,cushion buckwheat,Polygonaceae,PF,PF
+ERRA3,Eriogonum racemosum Nutt.,redroot buckwheat,Polygonaceae,PF,PF
+ERUM,Eriogonum umbellatum Torr.,sulphur-flower buckwheat,Polygonaceae,PF,PF
+POBI6,Polygonum bistortoides Pursh,American bistort,Polygonaceae,PF,PF
+POCO10,Polygonum convolvulus L.,black bindweed,Polygonaceae,AF,AF
+PODO4,Polygonum douglasii Greene,Douglas' knotweed,Polygonaceae,AF,AF
+LERE7,Lewisia rediviva Pursh,bitter root,Portulacaceae,PF,PF
+DOPU,Dodecatheon pulchellum (Raf.) Merr.,darkthroat shootingstar,Primulaceae,PF,PF
+CETE5,Ceratocephala testiculata (Crantz) Roth,curveseed butterwort,Ranunculaceae,AF,AF
+CLHI,Clematis hirsutissima Pursh,hairy clematis,Ranunculaceae,PF,PF
+DEAN,Delphinium andersonii A. Gray,Anderson's larkspur,Ranunculaceae,PF,PF
+DELPHPF,Delphinium L.,larkspur,Ranunculaceae,PF,PF
+DENU2,Delphinium nuttallianum Pritz. ex Walp.,twolobe larkspur,Ranunculaceae,PF,PF
+DESC,Delphinium scaposum Greene,tall mountain larkspur,Ranunculaceae,PF,PF
+THOC,Thalictrum occidentale A. Gray,western meadow-rue,Ranunculaceae,PF,PF
+AMAL2,Amelanchier alnifolia (Nutt.) Nutt. ex M. Roem.,Saskatoon serviceberry,Rosaceae,TR,TR
+FRVE,Fragaria vesca L.,woodland strawberry,Rosaceae,PF,PF
+GETR,Geum triflorum Pursh,old man's whiskers,Rosaceae,PF,PF
+POAR7,Potentilla arguta Pursh,tall cinquefoil,Rosaceae,PF,PF
+POCO13,Potentilla concinna Richardson,elegant cinquefoil,Rosaceae,PF,PF
+POHI6,Potentilla hippiana Lehm.,woolly cinquefoil,Rosaceae,PF,PF
+PONE7,Potentilla newberryi A. Gray,Newberry's cinquefoil,Rosaceae,PF,PF
+PUTR2,Purshia tridentata (Pursh) DC.,antelope bitterbrush,Rosaceae,SH,SH
+GABI,Galium bifolium S. Watson,twinleaf bedstraw,Rubiaceae,AF,AF
+GABO2,Galium boreale L.,northern bedstraw,Rubiaceae,PF,PF
+COUM,Comandra umbellata (L.) Nutt.,bastard toadflax,Santalaceae,PF,PF
+HEPA11,Heuchera parvifolia Nutt. ex Torr. & A. Gray,littleleaf alumroot,Saxifragaceae,PF,PF
+LIGL2,Lithophragma glabrum Nutt.,bulbous woodland-star,Saxifragaceae,PF,PF
+BEWY,Besseya wyomingensis (A. Nelson) Rydb.,Wyoming besseya,Scrophulariaceae,PF,PF
+CAAN7,Castilleja angustifolia (Nutt.) G. Don,northwestern Indian paintbrush,Scrophulariaceae,PF,PF
+CACH7,Castilleja chromosa A. Nelson,northwestern Indian paintbrush,Scrophulariaceae,PF,PF
+CAFL7,Castilleja flava S. Watson,yellow Indian paintbrush,Scrophulariaceae,PF,PF
+CAIN14,Castilleja integra A. Gray,wholeleaf Indian paintbrush,Scrophulariaceae,PF,PF
+CAPA25,Castilleja pallescens (A. Gray) Greenm.,pale Indian paintbrush,Scrophulariaceae,PF,PF
+CAPI3,Castilleja pilosa (S. Watson) Rydb.,parrothead Indian paintbrush,Scrophulariaceae,PF,PF
+COPA3,Collinsia parviflora Lindl.,maiden blue eyed Mary,Scrophulariaceae,AF,AF
+CORA5,Cordylanthus ramosus Nutt. ex Benth.,bushy bird's beak,Scrophulariaceae,AF,AF
+MINA,Mimulus nanus Hook. & Arn.,dwarf purple monkeyflower,Scrophulariaceae,AF,AF
+ORTE2,Orthocarpus tenuifolius (Pursh) Benth.,thinleaved owl's-clover,Scrophulariaceae,AF,AF
+PEAR,Penstemon arenicola A. Nelson,sand penstemon,Scrophulariaceae,PF,PF
+PEAR2,Penstemon aridus Rydb.,stiffleaf penstemon,Scrophulariaceae,PF,PF
+PEAU2,Penstemon auriberbis Pennell,Colorado beardtongue,Scrophulariaceae,PF,PF
+PECY3,Penstemon cyaneus Pennell,blue penstemon,Scrophulariaceae,PF,PF
+PEFR3,Penstemon fruticosus (Pursh) Greene,bush penstemon,Scrophulariaceae,PF,PF
+PEHU,Penstemon humilis Nutt. ex A. Gray,low beardtongue,Scrophulariaceae,PF,PF
+PEJA2,Penstemon janishiae N.H. Holmgren,Antelope Valley beardtongue,Scrophulariaceae,PF,PF
+PEPA26,Penstemon parvus Pennell,Aquarius Plateau beardtongue,Scrophulariaceae,PF,PF
+PESP,Penstemon speciosus Douglas ex Lindl.,royal penstemon,Scrophulariaceae,PF,PF
+VETH,Verbascum thapsus L.,common mullein,Scrophulariaceae,AF,AF
+VEAR,Veronica arvensis L.,corn speedwell,Scrophulariaceae,AF,AF
+SEDE2,Selaginella densa Rydb.,lesser spikemoss,Selaginellaceae,SEL,PF
+PLMA4,Plectritis macrocera Torr. & A. Gray,longhorn plectritis,Valerianaceae,AF,AF
+VAOC2,Valeriana occidentalis A. Heller,western valerian,Valerianaceae,PF,PF
+VINU2,Viola nuttallii Pursh,Nuttall's violet,Violaceae,PF,PF
+VIPR3,Viola praemorsa Douglas ex Lindl.,canary violet,Violaceae,PF,PF
+BR,bedrock,,,BR,R
+BY,boulder,,,BY,R
+CB,cobble,,,CB,R
+AF000,Dead beyond recognition code,,,AF,AF
+AG000,Dead beyond recognition code,,,AG,AG
+PF000,Dead beyond recognition code,,,PF,PF
+PG000,Dead beyond recognition code,,,PG,PG
+SH000,Dead beyond recognition code,,,SH,SH
+EL,embedded litter,,,EL,L
+GR,gravel,,,GR,R
+HL,herbaceous litter,,,HL,L
+LC,lichen,,,LC,LC
+M,moss,,,M,M
+NO GAPS >60 cm,NO GAPS >60 cm,,,NO GAPS,NA
+NO PLANTS,NO PLANTS,,,N,N
+None,none,,,N,N
+N,none,,,N,N
+S,soil,,,S,S
+ST,stone,,,ST,R
+AF047,Unknown annual forb,,,AF,AF
+AF400,Unknown annual forb,,,AF,AF
+AF013,Unknown annual forb,,,AF,AF
+AF046,Unknown annual forb,,,AF,AF
+AF024,Unknown annual forb,,,AF,AF
+AF,Unknown annual forb,,,AF,AF
+AF036,Unknown annual forb,,,AF,AF
+AF034,Unknown annual forb,,,AF,AF
+AF026,Unknown annual forb,,,AF,AF
+AF033,Unknown annual forb,,,AF,AF
+PF400,Unknown perennial forb,,,PF,PF
+PF,Unknown perennial forb,,,PF,PF
+PF035,Unknown perennial forb,,,PF,PF
+PF311,Unknown perennial forb,,,PF,PF
+PF318,Unknown perennial forb,,,PF,PF
+PF326,Unknown perennial forb,,,PF,PF
+PF306,Unknown perennial forb,,,PF,PF
+PF110,Unknown perennial forb,,,PF,PF
+PF043,Unknown perennial forb,,,PF,PF
+VL,vagrant lichen,,,VL,VL
+WL,woody litter,,,WL,L

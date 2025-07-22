@@ -12,13 +12,13 @@
 # and both RII and the dominance index.
 
 # Load relevant libraries
-library("tidyr")
+library(tidyr)
 library(viridis)
 
 # Set up directories
-datdir <- "C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/01_Data/Data for submission"
-figdir <- "C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/03_Figures/Figures for submission"
-codedir <- "C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/02_Code"
+datdir <- "01_Data/Data for submission"
+codedir <- "02_Code"
+figdir <- "03_Figures/Figures for submission"
 
 ################################################################################
 # Step 1: Get shallow soil sensitivity analysis simulation results

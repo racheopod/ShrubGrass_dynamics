@@ -14,13 +14,13 @@
 # Compare to site-specific vegetation results.
 
 # Load relevant libraries
-library("tidyr")
+library(tidyr)
 library(Ternary)
 
 # Set up directories
-datdir <- "C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/01_Data/Data for submission"
-figdir <- "C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/03_Figures/Figures for submission"
-codedir <- "C:/Users/rache/Dropbox/Doctoral_projects/Projects/Shrub-grass_relationships/05_Data_Analysis/02_Code"
+datdir <- "01_Data/Data for submission"
+codedir <- "02_Code"
+figdir <- "03_Figures/Figures for submission"
 
 ################################################################################
 # STEP 1: Get simulation results with site-specific vegetation cover settings
