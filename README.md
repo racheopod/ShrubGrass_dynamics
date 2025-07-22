@@ -20,16 +20,16 @@ Raw field data and summarized simulation output results can be found in `01_Data
 
 Scripts are numbered in order of the analysis:
 
-1. `01_Summarize_vegetation&climate.R` 
-2. `02_Exploring_dominance_clim&soilwater.R`
-3. `03_Exploring_RII_clim&soilwater.R`
-4. `04_Vegetation sensitivity_analysis.code.R`
-5. `05_Shallow_depth_test.R`
+    `01_Summarize_vegetation&climate.R` 
+    `02_Exploring_dominance_clim&soilwater.R`
+    `03_Exploring_RII_clim&soilwater.R`
+    `04_Vegetation sensitivity_analysis.code.R`
+    `05_Shallow_depth_test.R`
 
 Additional scripts containing functions called in the analysis scripts include:
 
-1. `lpi.R`
-2. `plantcommunity.R`
+    `lpi.R`
+    `plantcommunity.R`
 
 Figures generated for the publication and supplemental information are found in `03_Figures/Figures for submission`.
 

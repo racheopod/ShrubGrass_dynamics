@@ -162,7 +162,7 @@ points(results2$pcomm_cover_rii~results2$prop_shallow, pch = 16,
 results <- data.frame(coeff = rep(NA,10000), pvalue = rep(NA,10000))
 
 # Save plot that will contain all lines
-png(file.path(figdir,"Chapter1_Supp4FigS1a.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Supp4FigS1a.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar = c(3,2,1,1), mgp = c(1,0.1,0), tcl = 0.1)
 plot(1, xlim = c(0.3,0.7), ylim = c(-1,1), xlab = "",
      ylab = "RII (competitive to facilitative)", col = "white")
@@ -232,7 +232,7 @@ ests <- mean(results$coeff <= exp_results$estimate)
 
 
 # Create histogram of correlation coefficients
-png(file.path(figdir,"Chapter1_Supp4FigS1b.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Supp4FigS1b.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar = c(3,2,1,1), mgp = c(1,0.1,0), tcl = 0.1)
 hist(results$coeff, breaks = 50,
      main = "",
@@ -255,7 +255,7 @@ sameveg <- data.frame(vegplot = results2$plot, coeff = rep(NA, 51), pvalue = NA)
 
 # Plot linear relationships when veg is the same for all plots
 # Create figure 
-png(file.path(figdir,"Chapter1_Supp4FigS2a.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Supp4FigS2a.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar = c(3,2,1,1), mgp = c(1,0.1,0), tcl = 0.1)
 plot(1, xlim = c(0.3,0.7), ylim = c(-1,1), xlab = "",
      ylab = "RII (competitive to facilitative)", col = "white")
@@ -322,7 +322,7 @@ veg1 <- data.frame(shrub = results_wide$shrubs,
                    bareground = results_wide$bareground)
 
 # Save ternary plot
-png(file.path(figdir,"Chapter1_Supp4FigS2b.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Supp4FigS2b.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar = c(0,0,0,0))
 TernaryPlot(alab = "Shrub", blab = "Herbaceous", clab = "Bareground")
 TernaryPoints(as.matrix(veg1), pch = 16, 
