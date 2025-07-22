@@ -16,9 +16,9 @@ library(tidyr)
 library(viridis)
 
 # Set up directories
-datdir <- "01_Data/Data for submission"
+datdir <- "01_Data"
 codedir <- "02_Code"
-figdir <- "03_Figures/Figures for submission"
+figdir <- "03_Figures"
 
 ################################################################################
 # Step 1: Get shallow soil sensitivity analysis simulation results

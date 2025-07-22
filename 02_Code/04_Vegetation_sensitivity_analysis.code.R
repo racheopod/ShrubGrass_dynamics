@@ -18,9 +18,9 @@ library(tidyr)
 library(Ternary)
 
 # Set up directories
-datdir <- "01_Data/Data for submission"
+datdir <- "01_Data"
 codedir <- "02_Code"
-figdir <- "03_Figures/Figures for submission"
+figdir <- "03_Figures"
 
 ################################################################################
 # STEP 1: Get simulation results with site-specific vegetation cover settings

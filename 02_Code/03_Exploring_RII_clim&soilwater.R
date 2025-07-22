@@ -12,9 +12,9 @@
 library(dplyr)
 
 # Set up directories
-datadir <- '01_Data/Data for submission'
+datadir <- '01_Data'
 codedir <- '02_Code'
-figdir <- '03_Figures/Figures for submission'
+figdir <- '03_Figures'
 
 ################################################################################
 # Step 1: Get cover variables

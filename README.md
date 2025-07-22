@@ -15,12 +15,12 @@ visited 51 relatively undisturbed sites and collected data on plant
 cover and perennial grass abundance in shrub canopy and interspace
 microsites, then used these data to test a new conceptual framework for
 predicting plant functional type dominance in drylands. The manuscript
-is in preparation and will be made available after publication.
+is in preparation and the DOI will be made available after publication.
 
 Raw field data and summarized simulation output results can be found in
-`01_Data/Data for submission`.
+`01_Data`.
 
-Scripts are numbered in order of the analysis:
+Scripts (`02_Code`) are numbered in order of the analysis:
 
 - `01_Summarize_vegetation&climate.R` 
 - `02_Exploring_dominance_clim&soilwater.R`
@@ -36,7 +36,7 @@ include:
 - `plantcommunity.R`
 
 Figures generated for the publication and supplemental information are
-found in `03_Figures/Figures for submission`.
+found in `03_Figures`.
 
 ## System Information and Package Versions
 
