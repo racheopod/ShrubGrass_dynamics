@@ -126,7 +126,7 @@ summary(lm(cover1$dominance~cover1$WHC*cover1$CORR_PT))
 # R2 = 0.14, p = 0.073
 
 # Create figure 4a and save to file
-png(file.path(figdir,"Chapter1_Fig4a.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Fig4a.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar= c(3,3,1,1), mgp = c(1,0.1,0), tcl = 0.1, mfrow = c(1,1))
 plot(cover1$CORR_PT~c(cover1$WHC*-1), pch = 16, 
      col = cols[cover1$dom_bin],
@@ -153,7 +153,7 @@ dev.off()
 art <- rast(file.path(datadir, 'CoreARTR_combined_DayMet_cropped&trimmed.tif'))
 
 # Make file
-png(file.path(figdir,"Chapter1_Fig3a.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Fig3a.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar = c(1,1,1,1), tcl = -0.2)
 maps::map("state", regions = c("Wyoming","Nevada","Idaho","Colorado","Arizona",
                                "Utah","Washington","Oregon","Montana","California",
@@ -168,7 +168,7 @@ GISTools::north.arrow(x = -102, y = 46.5, lab = "N", len = 0.6, col = "black")
 dev.off()
 
 # Create legend for color scheme of dominance for map
-png(file.path(figdir,"Chapter1_Fig3a_legend.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Fig3a_legend.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar = c(1,1,1,1), las = 0, mgp = c(1,0.1,0))
 plot(c(1:10)~1, pch = 16, col = "white", yaxt = "n", xaxt = "n", bty = "n",
      xlab = "", ylab ="")
@@ -180,7 +180,7 @@ axis(side = 2, at = c(2,9), labels = c("Grass","Shrub"), pos = 5, tick = F,
 dev.off()
 
 # Show points in climate space
-png(file.path(figdir,"Chapter1_Fig3b.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Fig3b.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar = c(2,2,1,1), tcl = 0.1, mgp = c(1,0.1,0))
 plot(plots$map~plots$mat, pch = 16, cex=2,
        col = cols[cover1$dom_bin],
@@ -315,7 +315,7 @@ summary(lm(cover1$dominance~plots$prop_shallow+plots$avg_trans_0_200cm))
 # Now with linear models only
 m <- lm(cover1$dominance~plots$prop_shallow+plots$dry)
 
-png(file.path(figdir,"Chapter1_Fig4b.png"), width = 4, height = 4, units = "in", res = 300)
+png(file.path(figdir,"Chapter1_Fig4b.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar= c(3,2,1,1), mgp = c(1,0.1,0), tcl = 0.1, mfrow = c(1,1))
 plot(cover1$dominance~plots$prop_shallow, pch = 16, 
      col = c("#01665eb3", "#8c510ab3")[plots$dry+1],

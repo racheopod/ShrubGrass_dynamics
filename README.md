@@ -1,4 +1,10 @@
-# Data, code, and Figures for _Soil water depth distribution and species interactions mediate plant functional type dominance in drylands_
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Data, code, and Figures for *Soil water depth distribution and species interactions mediate plant functional type dominance in drylands*
 
 #### Renne, Rachel R., Burke, Ingrid C., & Lauenroth, William K.
 
@@ -6,39 +12,49 @@
 
 #### Repository created by Rachel R. Renne
 
----
+------------------------------------------------------------------------
 
-This repository includes the full analysis for our study on how soil water amount 
-and depth distribution determines shrub-grass dominance and interactions in sagebrush 
-ecosystems in the western United States. We visited 51 relatively undisturbed 
-sites and collected data on plant cover and perennial grass abundance in shrub
-canopy and interspace microsites, then used these data to test a new conceptual
-framework for predicting plant functional type dominance in drylands. The manuscript
+This repository includes the full analysis for our study on how soil
+water amount and depth distribution determines shrub-grass dominance and
+interactions in sagebrush ecosystems in the western United States. We
+visited 51 relatively undisturbed sites and collected data on plant
+cover and perennial grass abundance in shrub canopy and interspace
+microsites, then used these data to test a new conceptual framework for
+predicting plant functional type dominance in drylands. The manuscript
 is in preparation and will be made available after publication.
 
-Raw field data and summarized simulation output results can be found in `01_Data/Data for submission`.
+Raw field data and summarized simulation output results can be found in
+`01_Data/Data for submission`.
 
 Scripts are numbered in order of the analysis:
 
-1. `01_Summarize_vegetation&climate.R` 
-2. `02_Exploring_dominance_clim&soilwater.R`
-3. `03_Exploring_RII_clim&soilwater.R`
-4. `04_Vegetation sensitivity_analysis.code.R`
-5. `05_Shallow_depth_test.R`
+-   `01_Summarize_vegetation&climate.R`
 
-Additional scripts containing functions called in the analysis scripts include:
+-   `02_Exploring_dominance_clim&soilwater.R`
 
-1. `lpi.R`
-2. `plantcommunity.R`
+-   `03_Exploring_RII_clim&soilwater.R`
 
-Figures generated for the publication and supplemental information are found in `03_Figures/Figures for submission`.
+-   `04_Vegetation sensitivity_analysis.code.R`
+
+-   `05_Shallow_depth_test.R`
+
+Additional scripts containing functions called in the analysis scripts
+include:
+
+-   `lpi.R`
+
+-   `plantcommunity.R`
+
+Figures generated for the publication and supplemental information are
+found in `03_Figures/Figures for submission`.
 
 ## System Information and Package Versions
 
 <details>
-  <summary>Click here to expand</summary>
 
-```
+<summary>Click here to expand</summary>
+
+```         
 R version 4.5.1 (2025-06-13 ucrt)
 Platform: x86_64-w64-mingw32/x64
 Running under: Windows 10 x64 (build 19045)
@@ -73,4 +89,5 @@ loaded via a namespace (and not attached):
 [46] tibble_3.2.1       tidyselect_1.2.1   rstudioapi_0.14    xtable_1.8-4       htmltools_0.5.5   
 [51] compiler_4.5.1     sp_2.2-0    
 ```
+
 </details>
