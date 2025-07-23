@@ -61,7 +61,7 @@ pg <- microsites1[microsites1$ftype == "PG" | is.na(microsites1$ftype),]
 results1 <- merge(results, pg[,c(1,17)], by = "plot", all.x = TRUE)
 
 # Make results figure
-png(file.path(figdir,"Chapter1_Supp3b.png"), width = 4, height = 4, units = "in", res = 600)
+png(file.path(figdir,"FigS6b.png"), width = 4, height = 4, units = "in", res = 600)
 # Look at figure of RII ~ prop_shallow
 par(mar = c(3,2,1,1), mgp = c(1,0.1,0), tcl = 0.1)
 plot(results1$pcomm_cover_rii~results1$prop_shallow_10, 
@@ -111,7 +111,7 @@ cover1$dominance <- (cover1$SH - cover1$PG)/(cover1$SH + cover1$PG)
 table(cover1$plot == results$plot)
 
 # Save figure of dominance with different definitions of shallow
-png(file.path(figdir,"Chapter1_Supp3a.png"), width = 4, height = 4, units = "in", res = 600)
+png(file.path(figdir,"FigS6a.png"), width = 4, height = 4, units = "in", res = 600)
 # Look at figure of Dominance ~ prop_shallow
 par(mar = c(3,2,1,1), mgp = c(1,0.1,0), tcl = 0.1)
 plot(cover1$dominance~results1$prop_shallow_10, 
