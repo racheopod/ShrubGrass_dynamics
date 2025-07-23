@@ -272,7 +272,7 @@ summary(lm(pgrass$pcomm_cover_rii~pgrass$prop_shallow+pgrass$avg_trans_0_200cm))
 # Now with linear models only
 m <- lm(pgrass$pcomm_cover_rii~pgrass$prop_shallow+pgrass$dry)
 
-png(file.path(figdir,"Chapter1_Fig5b.png"), width = 4, height = 4, units = "in", res = 600)
+png(file.path(figdir,"Fig5b.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar= c(3,2,1,1), mgp = c(1,0.1,0), tcl = 0.1, mfrow = c(1,1))
 plot(pgrass$pcomm_cover_rii~pgrass$prop_shallow, pch = 16, 
      col = c("#01665eb3", "#8c510ab3")[pgrass$dry+1],
@@ -301,7 +301,7 @@ text(expression(R^2 ~ "= 0.32"), x = 0.67, y = 0.97)
 text("p < 0.001", x = 0.67, y = 0.84)
 dev.off()
 
-png(file.path(figdir,"Chapter1_Fig5a.png"), width = 4, height = 4, units = "in", res = 600)
+png(file.path(figdir,"Fig5a.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar= c(3,2,1,1), mgp = c(1,0.1,0), tcl = 0.1, mfrow = c(1,1))
 plot(pgrass$pcomm_cover_rii~pgrass$map, pch = 16, 
      col = rgb(0.5,0.5,0.5,0.5),
