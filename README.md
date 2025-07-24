@@ -8,7 +8,7 @@
 
 ---
 
-This repository includes the full analysis for our study on how soil
+This repository includes the full analysis for our study of how soil
 water amount and depth distribution determine shrub-grass dominance and
 interactions in sagebrush ecosystems in the western United States. We
 visited 51 relatively undisturbed sites and collected data on plant
