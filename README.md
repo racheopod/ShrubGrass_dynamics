@@ -6,6 +6,8 @@
 
 #### Repository created by Rachel R. Renne
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16414912.svg)](https://doi.org/10.5281/zenodo.16414912)
+
 ---
 
 This repository includes the full analysis for our study of how soil
