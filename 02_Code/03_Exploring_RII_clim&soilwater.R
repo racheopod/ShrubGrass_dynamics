@@ -287,8 +287,8 @@ curve(m$coefficients[1] + m$coefficients[2]*x, 0.3, 0.7, add = TRUE,
       lwd = 3, col = "#01665e") # wet plots
 curve(m$coefficients[1] + m$coefficients[3] + m$coefficients[2]*x, 0.3, 0.7, add = TRUE,
       lwd = 3, col = "#8c510a") # dry plots
-mtext("             Dry: Y = 1.91 - 3.55*X", side = 1, line = -2.2, adj = 0)
-mtext("             Wet: Y = 1.67 - 3.55*X", side = 1, line = -1, adj = 0)
+mtext("             Low moisture: Y = 1.91 - 3.55*X", side = 1, line = -2.2, adj = 0)
+mtext("             High moisture: Y = 1.67 - 3.55*X", side = 1, line = -1, adj = 0)
 # Wet
 points(x = 0.325, y = -1.009, cex = 2, col = "#01665eb3", pch = 16)
 #points(x = 0.325, y = -1.009, cex = 2, lwd = 2)

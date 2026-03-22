@@ -4,12 +4,18 @@
 # Rachel R. Renne
 # February 19, 2025
 # Updated: July 11, 2025
+# Updated: December 30, 2025
 ##################################
 
 # Approach: We calculated the proportion of transpiration from shallow soils for
 # shallow soils defined by depths 0 to: 10, 20, 30, 40, 50, 60, 70, 80, 90, and 100 cm.
 # Here, we calculate the correlations between each set of prop_shallow results 
 # and both RII and the dominance index.
+
+# We then ran a similar deep-soil analysis where we calculated the amount of 
+# transpiration from deep soil layers defined by an upper depth of 30 cm and lower
+# depths: 50, 75, 100, 125, 150, 175, and 200. Then we calculated the correlation 
+# between deep transpiration and both RII and the dominance index.
 
 # Load relevant libraries
 library(tidyr)
@@ -88,6 +94,50 @@ legend("bottomleft", bty = "n", legend = seq(10,100,by=10), title = "Shallow dep
 legend("bottomright", bty = "n", legend = "p < 0.05 for all depths")
 dev.off()
 
+
+#################################
+# Same approach but for deep soil layers
+
+# Read in deep transpiration results
+deep <- read.csv(file.path(datdir, "Deep_soil_sensitivity_simulation_results.csv"))
+
+# Check plot order
+table(results1$plot == deep$plot)
+
+# Make results figure
+png(file.path(figdir,"FigS6d.png"), width = 4, height = 4, units = "in", res = 600)
+# Look at figure of RII ~ prop_shallow
+par(mar = c(2,2,1,1), mgp = c(1,0.1,0), tcl = 0.1)
+plot(results1$pcomm_cover_rii~deep$avg_trans_30_70cm, 
+     xlim = c(0, 200), ylim = c(-1,1),
+     col = "white", pch = 16, cex = 2,
+     xlab = "",
+     ylab = "RII: Competition (-) to Facilitation (+)")
+mtext("Average annual deep transpiration (mm)", 1, line = 1)
+abline(h=0, lty = 2)
+
+deepres <- data.frame(deep = c(70,100,125,150,175,200), coeff = NA, pvalue = NA)
+for (i in 1:6){
+  exp_results <- cor.test(results1$pcomm_cover_rii, deep[,1+i]) 
+  deepres$coeff[i] <- exp_results$estimate
+  deepres$pvalue[i] <- exp_results$p.value
+  
+  m <- lm(results1$pcomm_cover_rii~deep[,1+i])
+  
+  if (exp_results$p.value < 0.05){
+    curve(m$coefficients[1]+x*m$coefficients[2], from = min(deep[,1+i]), to = max(deep[,1+i]), 
+          col = viridis(6)[i], lwd = 2, add = TRUE)
+  } else {
+    curve(m$coefficients[1]+x*m$coefficients[2], from = min(deep[,1+i]), to = max(deep[,1+i]), 
+          col = viridis(6)[i], lwd = 2, add = TRUE, lty = 2)
+  }
+}
+
+legend("bottomleft", bty = "n", legend = c(70,seq(100,200,by=25)), title = "Deep layers depth (cm)",
+       col = viridis(6), lwd = 2, cex = 0.7, y.intersp = 0.7)
+legend("bottomright", bty = "n", legend = "p > 0.05 for all depths")
+dev.off()
+
 ################################################################################
 # Step 3: Calculate dominance and compare across different definitions of shallow 
 #           soil water
@@ -137,3 +187,44 @@ legend("bottomleft", bty = "n", legend = seq(10,100,by=10), title = "Shallow dep
        col = viridis(10), lwd = 2, cex = 0.7, y.intersp = 0.7)
 legend("bottomright", bty = "n", legend = "p < 0.05 for all depths > 10 cm")
 dev.off()
+
+
+#################################
+# Repeat for deep soil layers
+
+# Check plot order
+table(deep$plot == cover1$plot)
+
+# Save figure of dominance with different definitions of shallow
+png(file.path(figdir,"FigS6c.png"), width = 4, height = 4, units = "in", res = 600)
+# Look at figure of Dominance ~ prop_shallow
+par(mar = c(2,2,1,1), mgp = c(1,0.1,0), tcl = 0.1)
+plot(cover1$dominance~deep$avg_trans_30_70cm, 
+     xlim = c(0, 200), ylim = c(-1,1),
+     col = "white", pch = 16, cex = 2,
+     xlab = "",
+     ylab = "Grass (-) to Shrub (+) dominance")
+mtext("Average annual deep transpiration (mm)", 1, line = 1)
+abline(h=0, lty = 2)
+
+deepres <- data.frame(shallow = c(70,100,125,150,175,200), coeff = NA, pvalue = NA)
+for (i in 1:6){
+  exp_results <- cor.test(cover1$dominance, deep[,1+i]) 
+  deepres$coeff[i] <- exp_results$estimate
+  deepres$pvalue[i] <- exp_results$p.value
+  
+  m <- lm(cover1$dominance~deep[,1+i])
+  if (exp_results$p.value < 0.05){
+    curve(m$coefficients[1]+x*m$coefficients[2], from = min(deep[,1+i]), to = max(deep[,1+i]), 
+          col = viridis(6)[i], lwd = 2, add = TRUE)
+  } else {
+    curve(m$coefficients[1]+x*m$coefficients[2], from = min(deep[,1+i]), to = max(deep[,1+i]), 
+          col = viridis(6)[i], lwd = 2, add = TRUE, lty = 2)
+  }
+}
+
+legend("bottomleft", bty = "n", legend = c(70,100,125,150,175,200), title = "Deep layers depth (cm)",
+       col = viridis(6), lwd = 2, cex = 0.7, y.intersp = 0.7)
+legend("bottomright", bty = "n", legend = "p > 0.05 for all depths > 70 cm")
+dev.off()
+

@@ -168,7 +168,7 @@ GISTools::north.arrow(x = -102, y = 46.5, lab = "N", len = 0.6, col = "black")
 dev.off()
 
 # Create legend for color scheme of dominance for map
-png(file.path(figdir,"Fig3a_legend.png"), width = 4, height = 4, units = "in", res = 600)
+png(file.path(figdir,"Fig3a_legend_v1.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar = c(1,1,1,1), las = 0, mgp = c(1,0.1,0))
 plot(c(1:10)~1, pch = 16, col = "white", yaxt = "n", xaxt = "n", bty = "n",
      xlab = "", ylab ="")
@@ -177,6 +177,10 @@ for (i in 1:(length(cols)-1)){
 }
 axis(side = 2, at = c(2,9), labels = c("Grass","Shrub"), pos = 5, tick = F,
      cex.axis = 1.7)
+par(mgp = c(1,0.5,0), tcl = -0.2)
+axis(side = 4, at = seq(1.5,9.5), labels = c("-1","-0.75","-0.5","-0.25","0",
+                                             "0.25","0.5","0.75","1"), pos = 5.53, tick = T,
+     cex.axis = 1.2)
 dev.off()
 
 # Show points in climate space
@@ -198,6 +202,7 @@ summary(lm(cover1$dominance ~ plots$prop_shallow*plots$avg_trans_0_200cm))
 
 summary(lm(cover1$dominance ~ plots$prop_shallow+plots$avg_trans_0_200cm))
 # R2 = 0.30, p = 0.0002, avg_trans_0_200cm not significant
+
 
 ################################################################################
 # Step 3: Check for dung effects
@@ -296,7 +301,7 @@ plots$dry_median <- as.numeric(plots$avg_trans_0_200cm < median(plots$avg_trans_
 
 # Look at dominance ~ prop_shallow + dry
 summary(lm(cover1$dominance~plots$prop_shallow*plots$dry))
-# R2 = 0.29, p = 0.008, interaction not significant
+# R2 = 0.29, p = 0.0008, interaction not significant
 summary(lm(cover1$dominance~plots$prop_shallow+plots$dry))
 # R2 = 0.29, p < 0.001
 
@@ -308,7 +313,7 @@ summary(lm(cover1$dominance~plots$prop_shallow+plots$dry_median))
 
 # Now look using average trans
 summary(lm(cover1$dominance~plots$prop_shallow*plots$avg_trans_0_200cm))
-# R2 = 0.30, p = 0.001, interaction not significant
+# R2 = 0.30, p < 0.001, interaction not significant
 summary(lm(cover1$dominance~plots$prop_shallow+plots$avg_trans_0_200cm))
 # R2 = 0.30, p < 0.001
 
@@ -330,8 +335,8 @@ curve(m$coefficients[1] + m$coefficients[2]*x, 0.3, 0.7, add = TRUE,
       lwd = 3, col = "#01665e") # wet plots
 curve(m$coefficients[1] + m$coefficients[3] + m$coefficients[2]*x, 0.3, 0.7, add = TRUE,
       lwd = 3, col = "#8c510a") # dry plots
-mtext("             Dry: Y = 1.65 - 2.56*X", side = 1, line = -2.2, adj = 0)
-mtext("             Wet: Y = 1.39 - 2.56*X", side = 1, line = -1, adj = 0)
+mtext("             Low moisture: Y = 1.65 - 2.56*X", side = 1, line = -2.2, adj = 0)
+mtext("             High moisture: Y = 1.39 - 2.56*X", side = 1, line = -1, adj = 0)
 # Wet
 points(x = 0.325, y = -1.009, cex = 2, col = "#01665eb3", pch = 16)
 #points(x = 0.325, y = -1.009, cex = 2, lwd = 2)
