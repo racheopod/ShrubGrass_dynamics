@@ -125,6 +125,10 @@ summary(lm(cover1$dominance~cover1$WHC+cover1$CORR_PT))
 summary(lm(cover1$dominance~cover1$WHC*cover1$CORR_PT))
 # R2 = 0.14, p = 0.073
 
+# Check AIC
+AIC(lm(cover1$dominance~cover1$WHC*cover1$CORR_PT))
+# [1] 62.69506
+
 # Create figure 4a and save to file
 png(file.path(figdir,"Fig4a.png"), width = 4, height = 4, units = "in", res = 600)
 par(mar= c(3,3,1,1), mgp = c(1,0.1,0), tcl = 0.1, mfrow = c(1,1))
@@ -203,6 +207,9 @@ summary(lm(cover1$dominance ~ plots$prop_shallow*plots$avg_trans_0_200cm))
 summary(lm(cover1$dominance ~ plots$prop_shallow+plots$avg_trans_0_200cm))
 # R2 = 0.30, p = 0.0002, avg_trans_0_200cm not significant
 
+# Check AIC
+AIC(lm(cover1$dominance ~ plots$prop_shallow+plots$avg_trans_0_200cm))
+# [1] 50.16849
 
 ################################################################################
 # Step 3: Check for dung effects
@@ -349,3 +356,114 @@ text(expression(R^2 ~ "= 0.29"), x = 0.67, y = 0.97)
 text("p < 0.001", x = 0.67, y = 0.84)
 dev.off()
 
+################################################################################
+# Step 6: Make a plot showing correlations among independent variables
+
+# Make combined DF with all data
+dat <- data.frame(cbind(plots$map, plots$mat, plots$sand, plots$clay,
+              cover1$WHC, cover1$CORR_PT, plots$avg_trans_0_200cm,
+              plots$avg_trans_0_30cm, plots$avg_trans_30_200cm,
+              plots$prop_shallow))
+names(dat) <- c("map","mat","sand","clay","WHC","pseas",
+                 "total_trans","shal_trans",
+                 "deep_trans","prop_shal")
+
+dat1 <- dat[,c("map","mat","pseas",
+                "total_trans","shal_trans",
+                "deep_trans","prop_shal",
+                "WHC","sand","clay")]
+
+varnames <- c("Mean annual precipitation (mm)",
+              "Mean annual temperature (C)",
+              "Precipitation seasonality (Corr(P,T))",
+              "Total transpiration (mm)",
+              "Shallow transpiration (mm)",
+              "Deep transpiration (mm)",
+              "Proportion shallow transpiration",
+              "Water holding capacity"
+              #"Sand content",
+              #"Clay content",
+              )
+
+
+varpairs <- data.frame(pair1 = c(1,1,1,1,1,1,1,#1,1,
+                                 0,2,2,2,2,2,2,#2,2,
+                                 0,0,3,3,3,3,3,#3,3,
+                                 0,0,0,4,4,4,4,#4,4,
+                                 0,0,0,0,5,5,5,#5,5,
+                                 0,0,0,0,0,6,6,#6,6,
+                                 0,0,0,0,0,0,7),#7,7,
+                                 #8,8,
+                                 #9
+                                 #),
+                       pair2 = c(2,3,4,5,6,7,8,#9,10,
+                                 0,3,4,5,6,7,8,#9,10,
+                                 0,0,4,5,6,7,8,#9,10,
+                                 0,0,0,5,6,7,8,#9,10,
+                                 0,0,0,0,6,7,8,#9,10,
+                                 0,0,0,0,0,7,8,#9,10,
+                                 0,0,0,0,0,0,8))#,9,10,
+                                 #9,10,
+                                 #10))
+
+
+vnames <- c("MAP",
+              "MAT)",
+              "Pseas",
+              "Trans",
+              "Strans",
+              "Dtrans",
+              "Pshal",
+              "WHC")
+
+png(file.path(figdir,"Correlations_v1.png"), width = 21, height = 21, units = "in", res = 600)
+par(mfrow = c(7,7))
+for (i in 1:nrow(varpairs)){
+  if (varpairs[i,1] == 0){
+    plot(1:5, yaxt = "n", xaxt = "n", col = "white",
+         xlab = "", ylab = "")
+    box(col = "white")
+  } else {
+  par(mar = c(2.75,2.75,2,1), mgp = c(1.5,0.1,0), tcl = -0.1)
+  corx <- cor.test(dat1[,varpairs[i,1]],dat1[,varpairs[i,2]])
+  sig <- corx$p.value < 0.05
+  if (sig){
+    thispch = 16; thiscol = "black"
+  } else {
+    thispch = 16; thiscol = rgb(0.5,0.5,0.5,0.7)
+  }
+  plot(dat1[,varpairs[i,1]]~dat1[,varpairs[i,2]],
+       ylab = varnames[varpairs[i,1]],
+       xlab = varnames[varpairs[i,2]],
+       pch = thispch, cex = 1.5, col = thiscol,
+       cex.lab = 1.5)
+  plt001 <- corx$p.value < 0.001
+  if (plt001){
+    pvalue = "p < 0.001"
+  } else {
+    pvalue = paste0("p = ", round(corx$p.value,3))
+  }
+  mtext(paste0("r = ", round(corx$estimate,2),", ",pvalue), side = 3, adj = 1)
+  }
+}
+dev.off()
+
+################################################################################
+# Step 7: plot seasonal precipitation across plots
+
+plots$winterppt <- plots$Dec_ppt + plots$Jan_ppt + plots$Feb_ppt
+plots$summerppt <- plots$Jun_ppt + plots$Jul_ppt + plots$Aug_ppt
+
+plots1 <- merge(plots, cover1, by = "plot")
+
+# Make figure showing seasonal precipitation
+png(file.path(figdir,"SeasonalPrecipitation.png"), width = 4, height = 4, units = "in", res = 600)
+par(mar = c(2,2,1,1), mgp = c(1,0.1,0), mfrow = c(1,1), tcl = 0.1)
+plot(plots1$winterppt ~ plots1$summerppt, pch = 16, cex = 2,
+     col = cols[plots1$dom_bin],
+     xlab = "Summer precipitation (mm)",
+     ylab = "Winter precipitation (mm)")
+points(plots1$winterppt ~ plots1$summerppt, cex = 2, lwd = 2)
+dev.off()
+
+     
